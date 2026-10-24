@@ -1,0 +1,56 @@
+version: 5
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://core-mosquitto:1883
+  user: addons
+  password: ru1AuChel3ahnaegajoo0uyooGhuubeo7kog8shooqu2reiBiaJaixahphai9IeX
+serial:
+  port: /dev/ttyACM0
+  adapter: ember
+  baudrate: 460800
+  rtscts: true
+advanced:
+  log_level: info
+  channel: 25
+  network_key:
+    - 4
+    - 185
+    - 211
+    - 170
+    - 86
+    - 205
+    - 206
+    - 26
+    - 134
+    - 22
+    - 167
+    - 108
+    - 98
+    - 5
+    - 74
+    - 60
+  pan_id: 56121
+  ext_pan_id:
+    - 50
+    - 240
+    - 93
+    - 217
+    - 198
+    - 240
+    - 224
+    - 5
+  enable_external_js: false
+frontend:
+  enabled: true
+  port: 8099
+homeassistant:
+  enabled: true
+devices:
+  '0x0c2a6ffffe750972':
+    friendly_name: Thermostat_Frank
+  '0x842712fffebb9c51':
+    friendly_name: Jalousie
+  '0x4c97a1fffe0bf615':
+    friendly_name: Thermostat _Esszimmer
+  '0x8c65a3fffef75f0a':
+    friendly_name: Bewegungssensor

@@ -1,0 +1,845 @@
+- id: '1790706276777'
+  alias: Heizung Frank - Zeit Anwesenheit Feiertage Boost
+  description: 'Heizungssteuerung für Franks Zimmer mit variablen Temperaturen und
+    Heizzeiten, Workday-/Feiertagserkennung, Anwesenheit, zeitbegrenztem Boost und
+    manuellem Beenden der aktuellen Heizperiode. Priorität: Boost > manuelle Heizperiodensperre
+    > Normalbetrieb > Absenkung.'
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.192_168_2_101
+  - trigger: state
+    entity_id:
+    - binary_sensor.workday_sensor_de_th
+  - trigger: state
+    entity_id:
+    - input_number.heiztemperatur_frank_zimmer
+    - input_number.absenktemperatur_frank_zimmer
+  - trigger: state
+    entity_id:
+    - input_datetime.werktag_morgens_start
+    - input_datetime.werktag_morgens_ende
+    - input_datetime.werktag_abends_start
+    - input_datetime.werktag_abends_ende
+    - input_datetime.wochenende_start
+    - input_datetime.wochenende_ende
+  - trigger: state
+    entity_id:
+    - timer.heizung_frank_boost
+  - trigger: state
+    entity_id:
+    - input_boolean.heizung_frank_heizperiode_beendet
+  - trigger: time
+    at:
+    - input_datetime.werktag_morgens_start
+    - input_datetime.werktag_morgens_ende
+    - input_datetime.werktag_abends_start
+    - input_datetime.werktag_abends_ende
+    - input_datetime.wochenende_start
+    - input_datetime.wochenende_ende
+  - trigger: time_pattern
+    minutes: /5
+  - trigger: homeassistant
+    event: start
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: timer.heizung_frank_boost
+        state: active
+      sequence:
+      - action: climate.set_temperature
+        target:
+          entity_id: climate.0x0c2a6ffffe750972
+        data:
+          temperature: '{{ states(''input_number.heiztemperatur_frank_zimmer'') |
+            float }}'
+    - conditions:
+      - condition: state
+        entity_id: input_boolean.heizung_frank_heizperiode_beendet
+        state: 'on'
+      sequence:
+      - action: climate.set_temperature
+        target:
+          entity_id: climate.0x0c2a6ffffe750972
+        data:
+          temperature: '{{ states(''input_number.absenktemperatur_frank_zimmer'')
+            | float }}'
+    - conditions:
+      - condition: state
+        entity_id: binary_sensor.192_168_2_101
+        state: 'on'
+      - condition: state
+        entity_id: binary_sensor.workday_sensor_de_th
+        state: 'on'
+      - condition: or
+        conditions:
+        - condition: time
+          after: input_datetime.werktag_morgens_start
+          before: input_datetime.werktag_morgens_ende
+        - condition: time
+          after: input_datetime.werktag_abends_start
+          before: input_datetime.werktag_abends_ende
+      sequence:
+      - action: climate.set_temperature
+        target:
+          entity_id: climate.0x0c2a6ffffe750972
+        data:
+          temperature: '{{ states(''input_number.heiztemperatur_frank_zimmer'') |
+            float }}'
+    - conditions:
+      - condition: state
+        entity_id: binary_sensor.192_168_2_101
+        state: 'on'
+      - condition: state
+        entity_id: binary_sensor.workday_sensor_de_th
+        state: 'off'
+      - condition: time
+        after: input_datetime.wochenende_start
+        before: input_datetime.wochenende_ende
+      sequence:
+      - action: climate.set_temperature
+        target:
+          entity_id: climate.0x0c2a6ffffe750972
+        data:
+          temperature: '{{ states(''input_number.heiztemperatur_frank_zimmer'') |
+            float }}'
+    default:
+    - action: climate.set_temperature
+      target:
+        entity_id: climate.0x0c2a6ffffe750972
+      data:
+        temperature: '{{ states(''input_number.absenktemperatur_frank_zimmer'') |
+          float }}'
+  mode: restart
+- id: '1790978711532'
+  alias: Heizung Frank - Heizperiodensperre zurücksetzen
+  description: Hebt eine manuell gesetzte Heizperiodensperre erst beim Beginn der
+    nächsten regulären Heizperiode wieder auf. Workday-Tage verwenden die Werktag-Startzeiten;
+    Wochenende/Feiertag verwendet die Wochenend-Startzeit.
+  triggers:
+  - trigger: time
+    at: input_datetime.werktag_morgens_start
+    id: werktag_morgens_start
+  - trigger: time
+    at: input_datetime.werktag_abends_start
+    id: werktag_abends_start
+  - trigger: time
+    at: input_datetime.wochenende_start
+    id: wochenende_start
+  conditions:
+  - condition: state
+    entity_id: input_boolean.heizung_frank_heizperiode_beendet
+    state: 'on'
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - werktag_morgens_start
+        - werktag_abends_start
+      - condition: state
+        entity_id: binary_sensor.workday_sensor_de_th
+        state: 'on'
+      sequence:
+      - action: input_boolean.turn_off
+        target:
+          entity_id: input_boolean.heizung_frank_heizperiode_beendet
+    - conditions:
+      - condition: trigger
+        id: wochenende_start
+      - condition: state
+        entity_id: binary_sensor.workday_sensor_de_th
+        state: 'off'
+      sequence:
+      - action: input_boolean.turn_off
+        target:
+          entity_id: input_boolean.heizung_frank_heizperiode_beendet
+  mode: restart
+- id: '1792241357804'
+  alias: 'Jalousie: Dämmerungssteuerung mit Offset'
+  description: 'Robuste Jalousiesteuerung anhand der bürgerlichen Morgen- und Abenddämmerung
+    mit positivem oder negativem Offset. Öffnungs- und Schließzeiten für heute und
+    den Folgetag werden persistent gespeichert. Nach Neustart werden veraltete Werte
+    erkannt. Falls nach einem langen Stromausfall keine aktuellen Dämmerungszeiten
+    mehr rekonstruiert werden können, wird für den aktuellen Tag ein Notbetrieb mit
+    08:00 Uhr Öffnen und 18:00 Uhr Schließen verwendet. Fahrbefehle werden unabhängig
+    vom gemeldeten open/closed-Zustand gesendet, da Zigbee2MQTT zeitweise einen veralteten
+    Zustand melden kann.
+
+    '
+  triggers:
+  - trigger: time
+    at: 00:01:00
+    id: tageswechsel
+  - trigger: time
+    at: '23:00:00'
+    id: morgen_vorbereiten
+  - trigger: time
+    at: input_datetime.jalousie_oeffnungszeit
+    id: oeffnen
+  - trigger: time
+    at: input_datetime.jalousie_schliesszeit
+    id: schliessen
+  - trigger: state
+    entity_id: input_number.offset_morgendaemmerung
+    id: offset_morgen
+  - trigger: state
+    entity_id: input_number.offset_abenddaemmerung
+    id: offset_abend
+  - trigger: homeassistant
+    event: start
+    id: system_start
+  - trigger: event
+    event_type: automation_reloaded
+    id: reload
+  - trigger: time
+    at: 08:05:00
+    id: sicherheitspruefung
+  - trigger: time
+    at: '18:05:00'
+    id: sicherheitspruefung
+  conditions: []
+  actions:
+  - if:
+    - condition: trigger
+      id: system_start
+    then:
+    - wait_template: "{{\n  states('sun.sun')\n    not in ['unknown', 'unavailable']\n
+        \ and\n  states('cover.0x842712fffebb9c51')\n    not in ['unknown', 'unavailable']\n}}\n"
+      timeout: 00:02:00
+      continue_on_timeout: true
+    - delay:
+        seconds: 5
+  - if:
+    - condition: trigger
+      id: tageswechsel
+    then:
+    - choose:
+      - conditions:
+        - condition: template
+          value_template: "{% set heute = now().strftime('%Y-%m-%d') %}\n{% set auf
+            =\n  state_attr(\n    'input_datetime.jalousie_oeffnungszeit_morgen',\n
+            \   'timestamp'\n  ) | float(0)\n%}\n{% set zu =\n  state_attr(\n    'input_datetime.jalousie_schliesszeit_morgen',\n
+            \   'timestamp'\n  ) | float(0)\n%}\n{{\n  auf > 0\n  and zu > 0\n  and\n
+            \ (\n    auf\n    | timestamp_custom('%Y-%m-%d', true)\n  ) == heute\n
+            \ and\n  (\n    zu\n    | timestamp_custom('%Y-%m-%d', true)\n  ) == heute\n}}\n"
+        sequence:
+        - action: input_datetime.set_datetime
+          target:
+            entity_id: input_datetime.jalousie_oeffnungszeit
+          data:
+            timestamp: "{{\n  state_attr(\n    'input_datetime.jalousie_oeffnungszeit_morgen',\n
+              \   'timestamp'\n  )\n}}\n"
+        - action: input_datetime.set_datetime
+          target:
+            entity_id: input_datetime.jalousie_schliesszeit
+          data:
+            timestamp: "{{\n  state_attr(\n    'input_datetime.jalousie_schliesszeit_morgen',\n
+              \   'timestamp'\n  )\n}}\n"
+      default:
+      - choose:
+        - conditions:
+          - condition: template
+            value_template: "{% set heute =\n  now().strftime('%Y-%m-%d')\n%}\n{%
+              set dawn =\n  as_timestamp(\n    state_attr('sun.sun', 'next_dawn')\n
+              \ ) | float(0)\n%}\n{% set dusk =\n  as_timestamp(\n    state_attr('sun.sun',
+              'next_dusk')\n  ) | float(0)\n%}\n{{\n  dawn > 0\n  and dusk > 0\n  and\n
+              \ (\n    dawn\n    | timestamp_custom('%Y-%m-%d', true)\n  ) == heute\n
+              \ and\n  (\n    dusk\n    | timestamp_custom('%Y-%m-%d', true)\n  )
+              == heute\n}}\n"
+          sequence:
+          - action: input_datetime.set_datetime
+            target:
+              entity_id: input_datetime.jalousie_oeffnungszeit
+            data:
+              timestamp: "{{\n  as_timestamp(\n    state_attr('sun.sun', 'next_dawn')\n
+                \ )\n  +\n  (\n    states(\n      'input_number.offset_morgendaemmerung'\n
+                \   ) | float(0)\n  ) * 60\n}}\n"
+          - action: input_datetime.set_datetime
+            target:
+              entity_id: input_datetime.jalousie_schliesszeit
+            data:
+              timestamp: "{{\n  as_timestamp(\n    state_attr('sun.sun', 'next_dusk')\n
+                \ )\n  +\n  (\n    states(\n      'input_number.offset_abenddaemmerung'\n
+                \   ) | float(0)\n  ) * 60\n}}\n"
+        default:
+        - action: input_datetime.set_datetime
+          target:
+            entity_id: input_datetime.jalousie_oeffnungszeit
+          data:
+            timestamp: "{{\n  as_timestamp(\n    today_at('08:00')\n  )\n}}\n"
+        - action: input_datetime.set_datetime
+          target:
+            entity_id: input_datetime.jalousie_schliesszeit
+          data:
+            timestamp: "{{\n  as_timestamp(\n    today_at('18:00')\n  )\n}}\n"
+  - if:
+    - condition: trigger
+      id: morgen_vorbereiten
+    then:
+    - choose:
+      - conditions:
+        - condition: template
+          value_template: "{% set morgen =\n  (\n    now() + timedelta(days=1)\n  ).strftime('%Y-%m-%d')\n%}\n{%
+            set dawn =\n  as_timestamp(\n    state_attr('sun.sun', 'next_dawn')\n
+            \ ) | float(0)\n%}\n{% set dusk =\n  as_timestamp(\n    state_attr('sun.sun',
+            'next_dusk')\n  ) | float(0)\n%}\n{{\n  dawn > 0\n  and dusk > 0\n  and\n
+            \ (\n    dawn\n    | timestamp_custom('%Y-%m-%d', true)\n  ) == morgen\n
+            \ and\n  (\n    dusk\n    | timestamp_custom('%Y-%m-%d', true)\n  ) ==
+            morgen\n}}\n"
+        sequence:
+        - action: input_datetime.set_datetime
+          target:
+            entity_id: input_datetime.jalousie_oeffnungszeit_morgen
+          data:
+            timestamp: "{{\n  as_timestamp(\n    state_attr('sun.sun', 'next_dawn')\n
+              \ )\n  +\n  (\n    states(\n      'input_number.offset_morgendaemmerung'\n
+              \   ) | float(0)\n  ) * 60\n}}\n"
+        - action: input_datetime.set_datetime
+          target:
+            entity_id: input_datetime.jalousie_schliesszeit_morgen
+          data:
+            timestamp: "{{\n  as_timestamp(\n    state_attr('sun.sun', 'next_dusk')\n
+              \ )\n  +\n  (\n    states(\n      'input_number.offset_abenddaemmerung'\n
+              \   ) | float(0)\n  ) * 60\n}}\n"
+      default:
+      - action: input_datetime.set_datetime
+        target:
+          entity_id: input_datetime.jalousie_oeffnungszeit_morgen
+        data:
+          timestamp: "{{\n  as_timestamp(\n    today_at('08:00')\n    + timedelta(days=1)\n
+            \ )\n}}\n"
+      - action: input_datetime.set_datetime
+        target:
+          entity_id: input_datetime.jalousie_schliesszeit_morgen
+        data:
+          timestamp: "{{\n  as_timestamp(\n    today_at('18:00')\n    + timedelta(days=1)\n
+            \ )\n}}\n"
+  - if:
+    - condition: trigger
+      id: offset_morgen
+    - condition: template
+      value_template: "{{\n  trigger.from_state is not none\n  and trigger.to_state
+        is not none\n  and trigger.from_state.state\n    not in ['unknown', 'unavailable']\n
+        \ and trigger.to_state.state\n    not in ['unknown', 'unavailable']\n}}\n"
+    then:
+    - variables:
+        offset_differenz: "{{\n  (\n    (\n      trigger.to_state.state | float(0)\n
+          \   )\n    -\n    (\n      trigger.from_state.state | float(0)\n    )\n
+          \ ) * 60\n}}\n"
+    - action: input_datetime.set_datetime
+      target:
+        entity_id: input_datetime.jalousie_oeffnungszeit
+      data:
+        timestamp: "{{\n  (\n    state_attr(\n      'input_datetime.jalousie_oeffnungszeit',\n
+          \     'timestamp'\n    ) | float(0)\n  )\n  +\n  offset_differenz\n}}\n"
+    - action: input_datetime.set_datetime
+      target:
+        entity_id: input_datetime.jalousie_oeffnungszeit_morgen
+      data:
+        timestamp: "{{\n  (\n    state_attr(\n      'input_datetime.jalousie_oeffnungszeit_morgen',\n
+          \     'timestamp'\n    ) | float(0)\n  )\n  +\n  offset_differenz\n}}\n"
+  - if:
+    - condition: trigger
+      id: offset_abend
+    - condition: template
+      value_template: "{{\n  trigger.from_state is not none\n  and trigger.to_state
+        is not none\n  and trigger.from_state.state\n    not in ['unknown', 'unavailable']\n
+        \ and trigger.to_state.state\n    not in ['unknown', 'unavailable']\n}}\n"
+    then:
+    - variables:
+        offset_differenz: "{{\n  (\n    (\n      trigger.to_state.state | float(0)\n
+          \   )\n    -\n    (\n      trigger.from_state.state | float(0)\n    )\n
+          \ ) * 60\n}}\n"
+    - action: input_datetime.set_datetime
+      target:
+        entity_id: input_datetime.jalousie_schliesszeit
+      data:
+        timestamp: "{{\n  (\n    state_attr(\n      'input_datetime.jalousie_schliesszeit',\n
+          \     'timestamp'\n    ) | float(0)\n  )\n  +\n  offset_differenz\n}}\n"
+    - action: input_datetime.set_datetime
+      target:
+        entity_id: input_datetime.jalousie_schliesszeit_morgen
+      data:
+        timestamp: "{{\n  (\n    state_attr(\n      'input_datetime.jalousie_schliesszeit_morgen',\n
+          \     'timestamp'\n    ) | float(0)\n  )\n  +\n  offset_differenz\n}}\n"
+  - variables:
+      heute_datum: '{{ now().strftime(''%Y-%m-%d'') }}
+
+        '
+      morgen_datum: "{{\n  (\n    now() + timedelta(days=1)\n  ).strftime('%Y-%m-%d')\n}}\n"
+      auf_heute: "{{\n  state_attr(\n    'input_datetime.jalousie_oeffnungszeit',\n
+        \   'timestamp'\n  ) | float(0)\n}}\n"
+      zu_heute: "{{\n  state_attr(\n    'input_datetime.jalousie_schliesszeit',\n
+        \   'timestamp'\n  ) | float(0)\n}}\n"
+      auf_morgen: "{{\n  state_attr(\n    'input_datetime.jalousie_oeffnungszeit_morgen',\n
+        \   'timestamp'\n  ) | float(0)\n}}\n"
+      zu_morgen: "{{\n  state_attr(\n    'input_datetime.jalousie_schliesszeit_morgen',\n
+        \   'timestamp'\n  ) | float(0)\n}}\n"
+  - if:
+    - condition: template
+      value_template: "{{\n  auf_heute <= 0\n  or zu_heute <= 0\n  or\n  (\n    auf_heute\n
+        \   | timestamp_custom('%Y-%m-%d', true)\n  ) != heute_datum\n  or\n  (\n
+        \   zu_heute\n    | timestamp_custom('%Y-%m-%d', true)\n  ) != heute_datum\n}}\n"
+    then:
+    - choose:
+      - conditions:
+        - condition: template
+          value_template: "{{\n  auf_morgen > 0\n  and zu_morgen > 0\n  and\n  (\n
+            \   auf_morgen\n    | timestamp_custom('%Y-%m-%d', true)\n  ) == heute_datum\n
+            \ and\n  (\n    zu_morgen\n    | timestamp_custom('%Y-%m-%d', true)\n
+            \ ) == heute_datum\n}}\n"
+        sequence:
+        - action: input_datetime.set_datetime
+          target:
+            entity_id: input_datetime.jalousie_oeffnungszeit
+          data:
+            timestamp: '{{ auf_morgen }}
+
+              '
+        - action: input_datetime.set_datetime
+          target:
+            entity_id: input_datetime.jalousie_schliesszeit
+          data:
+            timestamp: '{{ zu_morgen }}
+
+              '
+      - conditions:
+        - condition: template
+          value_template: "{% set dawn =\n  as_timestamp(\n    state_attr('sun.sun',
+            'next_dawn')\n  ) | float(0)\n%}\n{% set dusk =\n  as_timestamp(\n    state_attr('sun.sun',
+            'next_dusk')\n  ) | float(0)\n%}\n{{\n  dawn > 0\n  and dusk > 0\n  and\n
+            \ (\n    dawn\n    | timestamp_custom('%Y-%m-%d', true)\n  ) == heute_datum\n
+            \ and\n  (\n    dusk\n    | timestamp_custom('%Y-%m-%d', true)\n  ) ==
+            heute_datum\n}}\n"
+        sequence:
+        - action: input_datetime.set_datetime
+          target:
+            entity_id: input_datetime.jalousie_oeffnungszeit
+          data:
+            timestamp: "{{\n  as_timestamp(\n    state_attr('sun.sun', 'next_dawn')\n
+              \ )\n  +\n  (\n    states(\n      'input_number.offset_morgendaemmerung'\n
+              \   ) | float(0)\n  ) * 60\n}}\n"
+        - action: input_datetime.set_datetime
+          target:
+            entity_id: input_datetime.jalousie_schliesszeit
+          data:
+            timestamp: "{{\n  as_timestamp(\n    state_attr('sun.sun', 'next_dusk')\n
+              \ )\n  +\n  (\n    states(\n      'input_number.offset_abenddaemmerung'\n
+              \   ) | float(0)\n  ) * 60\n}}\n"
+      default:
+      - action: input_datetime.set_datetime
+        target:
+          entity_id: input_datetime.jalousie_oeffnungszeit
+        data:
+          timestamp: "{{\n  as_timestamp(\n    today_at('08:00')\n  )\n}}\n"
+      - action: input_datetime.set_datetime
+        target:
+          entity_id: input_datetime.jalousie_schliesszeit
+        data:
+          timestamp: "{{\n  as_timestamp(\n    today_at('18:00')\n  )\n}}\n"
+  - if:
+    - condition: trigger
+      id:
+      - system_start
+      - reload
+    then:
+    - variables:
+        dawn_naechste: "{{\n  as_timestamp(\n    state_attr('sun.sun', 'next_dawn')\n
+          \ ) | float(0)\n}}\n"
+        dusk_naechste: "{{\n  as_timestamp(\n    state_attr('sun.sun', 'next_dusk')\n
+          \ ) | float(0)\n}}\n"
+    - if:
+      - condition: template
+        value_template: "{{\n  (\n    (\n      state_attr(\n        'input_datetime.jalousie_oeffnungszeit_morgen',\n
+          \       'timestamp'\n      ) | float(0)\n    )\n    | timestamp_custom('%Y-%m-%d',
+          true)\n  ) != morgen_datum\n  or\n  (\n    (\n      state_attr(\n        'input_datetime.jalousie_schliesszeit_morgen',\n
+          \       'timestamp'\n      ) | float(0)\n    )\n    | timestamp_custom('%Y-%m-%d',
+          true)\n  ) != morgen_datum\n}}\n"
+      then:
+      - choose:
+        - conditions:
+          - condition: template
+            value_template: "{{\n  dawn_naechste > 0\n  and dusk_naechste > 0\n  and\n
+              \ (\n    dawn_naechste\n    | timestamp_custom('%Y-%m-%d', true)\n  )
+              == morgen_datum\n  and\n  (\n    dusk_naechste\n    | timestamp_custom('%Y-%m-%d',
+              true)\n  ) == morgen_datum\n}}\n"
+          sequence:
+          - action: input_datetime.set_datetime
+            target:
+              entity_id: input_datetime.jalousie_oeffnungszeit_morgen
+            data:
+              timestamp: "{{\n  dawn_naechste\n  +\n  (\n    states(\n      'input_number.offset_morgendaemmerung'\n
+                \   ) | float(0)\n  ) * 60\n}}\n"
+          - action: input_datetime.set_datetime
+            target:
+              entity_id: input_datetime.jalousie_schliesszeit_morgen
+            data:
+              timestamp: "{{\n  dusk_naechste\n  +\n  (\n    states(\n      'input_number.offset_abenddaemmerung'\n
+                \   ) | float(0)\n  ) * 60\n}}\n"
+        default:
+        - action: input_datetime.set_datetime
+          target:
+            entity_id: input_datetime.jalousie_oeffnungszeit_morgen
+          data:
+            timestamp: "{{\n  as_timestamp(\n    today_at('08:00')\n    + timedelta(days=1)\n
+              \ )\n}}\n"
+        - action: input_datetime.set_datetime
+          target:
+            entity_id: input_datetime.jalousie_schliesszeit_morgen
+          data:
+            timestamp: "{{\n  as_timestamp(\n    today_at('18:00')\n    + timedelta(days=1)\n
+              \ )\n}}\n"
+  - if:
+    - condition: trigger
+      id: oeffnen
+    then:
+    - action: cover.open_cover
+      target:
+        entity_id: cover.0x842712fffebb9c51
+    - stop: 'Berechnete Öffnungszeit erreicht. Öffnungsbefehl wurde gesendet.
+
+        '
+  - if:
+    - condition: trigger
+      id: schliessen
+    then:
+    - action: cover.close_cover
+      target:
+        entity_id: cover.0x842712fffebb9c51
+    - stop: 'Berechnete Schließzeit erreicht. Schließbefehl wurde gesendet.
+
+        '
+  - variables:
+      jetzt: '{{ as_timestamp(now()) }}
+
+        '
+      oeffnungszeit_aktuell: "{{\n  state_attr(\n    'input_datetime.jalousie_oeffnungszeit',\n
+        \   'timestamp'\n  ) | float(0)\n}}\n"
+      schliesszeit_aktuell: "{{\n  state_attr(\n    'input_datetime.jalousie_schliesszeit',\n
+        \   'timestamp'\n  ) | float(0)\n}}\n"
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: "{{\n  oeffnungszeit_aktuell > 0\n  and schliesszeit_aktuell
+          > 0\n  and\n  oeffnungszeit_aktuell <= jetzt\n  and\n  jetzt < schliesszeit_aktuell\n}}\n"
+      sequence:
+      - action: cover.open_cover
+        target:
+          entity_id: cover.0x842712fffebb9c51
+    default:
+    - action: cover.close_cover
+      target:
+        entity_id: cover.0x842712fffebb9c51
+  mode: restart
+- id: '1792301455295'
+  alias: Heizung Ess-Zimmer - Heizperiodensperre zurücksetzen
+  description: 'Gibt die Heizungsautomatik nach dem Ende einer manuell abgebrochenen
+    Heizperiode wieder frei.
+
+    '
+  triggers:
+  - trigger: time
+    at:
+    - input_datetime.werktag_morgens_ess_zimmer_ende
+    - input_datetime.werktag_abends_ess_zimmer_ende
+    - input_datetime.wochenende_ess_zimmer_ende
+  actions:
+  - action: input_boolean.turn_off
+    target:
+      entity_id: input_boolean.heizung_ess_zimmer_heizperiode_beendet
+    data: {}
+  mode: restart
+- id: '1792304425201'
+  alias: Heizung Ess-Zimmer - Zeit Anwesenheit Feiertage Boost
+  description: 'Heizungssteuerung für Ess-Zimmer mit variablen Temperaturen und Heizzeiten,
+    Workday-/Feiertagserkennung, zeitbegrenztem Boost und manuellem Beenden einer
+    Heizperiode. Boost besitzt höchste Priorität.
+
+    '
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.workday_sensor_de_th
+  - trigger: state
+    entity_id:
+    - input_number.heiztemperatur_ess_zimmer
+    - input_number.absenktemperatur_ess_zimmer
+    - input_number.boost_temperatur_ess_zimmer
+    - input_number.werktages_temperatur_ess_zimmer
+    - input_number.hand_boost_temperatur_ess_zimmer
+  - trigger: state
+    entity_id:
+    - input_datetime.werktag_morgens_ess_zimmer_start
+    - input_datetime.werktag_morgens_ess_zimmer_ende
+    - input_datetime.werktag_abends_ess_zimmer_start
+    - input_datetime.werktag_abends_ess_zimmer_ende
+    - input_datetime.wochenende_ess_zimmer_start
+    - input_datetime.wochenende_ess_zimmer_ende
+  - trigger: state
+    entity_id:
+    - input_boolean.einbeziehung_anwesenheit_ess_zimmer
+    - timer.esszimmer_timer_heizung_boost
+    - timer.esszimmer_hand_timer_heizung_boost
+  - trigger: state
+    entity_id:
+    - input_boolean.heizung_ess_zimmer_heizperiode_beendet
+  - trigger: time
+    at:
+    - input_datetime.werktag_morgens_ess_zimmer_start
+    - input_datetime.werktag_morgens_ess_zimmer_ende
+    - input_datetime.werktag_abends_ess_zimmer_start
+    - input_datetime.werktag_abends_ess_zimmer_ende
+  - trigger: time
+    at:
+    - input_datetime.wochenende_ess_zimmer_start
+    - input_datetime.wochenende_ess_zimmer_ende
+  - trigger: time_pattern
+    minutes: /5
+  - trigger: homeassistant
+    event: start
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: timer.esszimmer_timer_heizung_boost
+        state: active
+      sequence:
+      - action: climate.set_temperature
+        target:
+          entity_id: climate.0x4c97a1fffe0bf615
+        data:
+          temperature: '{{ states(''input_number.boost_temperatur_ess_zimmer'') |
+            float }}
+
+            '
+    - conditions:
+      - condition: state
+        entity_id: timer.esszimmer_hand_timer_heizung_boost
+        state: active
+      sequence:
+      - action: climate.set_temperature
+        target:
+          entity_id: climate.0x4c97a1fffe0bf615
+        data:
+          temperature: '{{ states(''input_number.hand_boost_temperatur_ess_zimmer'')
+            | float }}
+
+            '
+    - conditions:
+      - condition: state
+        entity_id: input_boolean.heizung_ess_zimmer_heizperiode_beendet
+        state: 'on'
+      sequence:
+      - action: climate.set_temperature
+        target:
+          entity_id: climate.0x4c97a1fffe0bf615
+        data:
+          temperature: '{{ states(''input_number.absenktemperatur_ess_zimmer'') |
+            float }}
+
+            '
+    - conditions:
+      - condition: state
+        entity_id: binary_sensor.workday_sensor_de_th
+        state: 'on'
+      - condition: or
+        conditions:
+        - condition: time
+          after: input_datetime.werktag_morgens_ess_zimmer_start
+          before: input_datetime.werktag_morgens_ess_zimmer_ende
+        - condition: time
+          after: input_datetime.werktag_abends_ess_zimmer_start
+          before: input_datetime.werktag_abends_ess_zimmer_ende
+      sequence:
+      - action: climate.set_temperature
+        target:
+          entity_id: climate.0x4c97a1fffe0bf615
+        data:
+          temperature: '{{ states(''input_number.werktages_temperatur_ess_zimmer'')
+            | float }}
+
+            '
+    - conditions:
+      - condition: state
+        entity_id: binary_sensor.workday_sensor_de_th
+        state: 'off'
+      - condition: time
+        after: input_datetime.wochenende_ess_zimmer_start
+        before: input_datetime.wochenende_ess_zimmer_ende
+      sequence:
+      - action: climate.set_temperature
+        target:
+          entity_id: climate.0x4c97a1fffe0bf615
+        data:
+          temperature: '{{ states(''input_number.heiztemperatur_ess_zimmer'') | float
+            }}
+
+            '
+    default:
+    - action: climate.set_temperature
+      target:
+        entity_id: climate.0x4c97a1fffe0bf615
+      data:
+        temperature: '{{ states(''input_number.absenktemperatur_ess_zimmer'') | float
+          }}
+
+          '
+  mode: restart
+- id: '1792313899053'
+  alias: Heizung Ess-Zimmer - Manueller Thermostat Boost
+  description: 'Erkennt eine manuelle Änderung der Solltemperatur am Thermostat, wartet
+    auf die Aktualisierung der Änderungsquelle, übernimmt die manuell gewählte Temperatur
+    als Hand-Boost-Temperatur und startet den Hand-Boost-Timer.
+
+    '
+  triggers:
+  - trigger: state
+    entity_id: climate.0x4c97a1fffe0bf615
+    attribute: temperature
+  conditions:
+  - condition: template
+    value_template: "{{ trigger.from_state is not none\n   and trigger.to_state is
+      not none\n   and trigger.from_state.attributes.temperature !=\n       trigger.to_state.attributes.temperature
+      }}\n"
+  actions:
+  - delay:
+      seconds: 2
+  - condition: state
+    entity_id: sensor.0x4c97a1fffe0bf615_setpoint_change_source
+    state: manual
+  - action: input_number.set_value
+    target:
+      entity_id: input_number.hand_boost_temperatur_ess_zimmer
+    data:
+      value: '{{ trigger.to_state.attributes.temperature | float }}
+
+        '
+  - action: input_boolean.turn_off
+    target:
+      entity_id: input_boolean.heizung_ess_zimmer_heizperiode_beendet
+  - action: timer.start
+    target:
+      entity_id: timer.esszimmer_hand_timer_heizung_boost
+    data:
+      duration: '{{ states(''input_datetime.esszimmer_heizung_hand_boost_dauer'')
+        }}
+
+        '
+  mode: restart
+- id: '1792447727777'
+  alias: Heizung Ess-Zimmer - Hand-Boost bei Anwesenheit verlängern
+  description: 'Prüft nach 85 % der ursprünglichen Hand-Boost-Zeit die Anwesenheit.
+    Ist das Esszimmer belegt, wird der Hand-Boost solange aufrechterhalten, wie Anwesenheit
+    besteht. Die unter "Boost Verlängerung bei Anwesenheit" eingestellte Zeit dient
+    dabei als verbleibende Reservezeit. Bei Wegfall der Anwesenheit oder beim externen
+    Stoppen des Timers wird der Hand-Boost beendet.
+
+    '
+  triggers:
+  - trigger: state
+    entity_id: timer.esszimmer_hand_timer_heizung_boost
+    to: active
+  conditions:
+  - condition: state
+    entity_id: input_boolean.einbeziehung_anwesenheit_ess_zimmer
+    state: 'on'
+  actions:
+  - variables:
+      timer_start: '{{ as_timestamp(now()) }}
+
+        '
+      timer_ende: "{{\n  as_timestamp(\n    state_attr(\n      'timer.esszimmer_hand_timer_heizung_boost',\n
+        \     'finishes_at'\n    )\n  )\n}}\n"
+      timer_dauer: "{{\n  timer_ende | float(0)\n  -\n  timer_start | float(0)\n}}\n"
+  - delay:
+      seconds: "{{\n  (timer_dauer | float(0) * 0.85)\n  | int\n}}\n"
+  - condition: state
+    entity_id: timer.esszimmer_hand_timer_heizung_boost
+    state: active
+  - condition: state
+    entity_id: input_boolean.einbeziehung_anwesenheit_ess_zimmer
+    state: 'on'
+  - if:
+    - condition: state
+      entity_id: binary_sensor.0x8c65a3fffef75f0a_occupancy
+      state: 'off'
+    then:
+    - action: timer.cancel
+      target:
+        entity_id: timer.esszimmer_hand_timer_heizung_boost
+    - stop: 'Keine Anwesenheit bei 85 Prozent der Boostzeit.
+
+        '
+  - repeat:
+      while:
+      - condition: state
+        entity_id: timer.esszimmer_hand_timer_heizung_boost
+        state: active
+      - condition: state
+        entity_id: input_boolean.einbeziehung_anwesenheit_ess_zimmer
+        state: 'on'
+      - condition: state
+        entity_id: binary_sensor.0x8c65a3fffef75f0a_occupancy
+        state: 'on'
+      - condition: template
+        value_template: "{{\n  states(\n    'input_number.boost_verlaengerung_anwesenheit'\n
+          \ ) | float(0) > 0\n}}\n"
+      sequence:
+      - variables:
+          reserve_sekunden: "{{\n  (\n    states(\n      'input_number.boost_verlaengerung_anwesenheit'\n
+            \   )\n    | float(0)\n  ) * 60\n  | int\n}}\n"
+      - action: timer.start
+        target:
+          entity_id: timer.esszimmer_hand_timer_heizung_boost
+        data:
+          duration: '{{ reserve_sekunden }}
+
+            '
+      - wait_for_trigger:
+        - trigger: state
+          entity_id: binary_sensor.0x8c65a3fffef75f0a_occupancy
+          to: 'off'
+          id: abwesend
+        - trigger: state
+          entity_id: timer.esszimmer_hand_timer_heizung_boost
+          to: idle
+          id: timer_beendet
+        - trigger: state
+          entity_id: input_boolean.einbeziehung_anwesenheit_ess_zimmer
+          to: 'off'
+          id: funktion_aus
+        timeout:
+          seconds: "{{\n  (reserve_sekunden | float(0) * 0.85)\n  | int\n}}\n"
+        continue_on_timeout: true
+      - if:
+        - condition: template
+          value_template: "{{\n  wait.trigger is not none\n  and wait.trigger.id ==
+            'abwesend'\n}}\n"
+        then:
+        - action: timer.cancel
+          target:
+            entity_id: timer.esszimmer_hand_timer_heizung_boost
+        - stop: 'Anwesenheit im Esszimmer beendet.
+
+            '
+      - if:
+        - condition: template
+          value_template: "{{\n  wait.trigger is not none\n  and wait.trigger.id ==
+            'timer_beendet'\n}}\n"
+        then:
+        - stop: 'Hand-Boost-Timer wurde extern beendet.
+
+            '
+      - if:
+        - condition: template
+          value_template: "{{\n  wait.trigger is not none\n  and wait.trigger.id ==
+            'funktion_aus'\n}}\n"
+        then:
+        - stop: 'Anwesenheitsverlängerung wurde deaktiviert.
+
+            '
+  mode: restart

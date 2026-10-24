@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_datetime",
+  "data": {
+    "items": [
+      {
+        "id": "werktag_morgens_start",
+        "name": "Werktag morgens Start",
+        "has_date": false,
+        "has_time": true
+      },
+      {
+        "id": "werktag_morgens_ende",
+        "name": "Werktag morgens Ende",
+        "has_date": false,
+        "has_time": true
+      },
+      {
+        "id": "werktag_abends_start",
+        "name": "Werktag abends Start",
+        "has_date": false,
+        "has_time": true
+      },
+      {
+        "id": "werktag_abends_ende",
+        "name": "Werktag abends Ende",
+        "has_date": false,
+        "has_time": true
+      },
+      {
+        "id": "wochenende_start",
+        "has_time": true,
+        "has_date": false,
+        "name": "Wochenende Start"
+      },
+      {
+        "id": "wochenende_ende",
+        "name": "Wochenende Ende",
+        "has_date": false,
+        "has_time": true
+      },
+      {
+        "id": "input_datetime_werktag_morgens_ess_zimmer_start",
+        "name": "Werktags morgens Start",
+        "has_date": false,
+        "has_time": true
+      },
+      {
+        "id": "input_datetime_werktag_morgens_ess_zimmer_ende",
+        "name": "Werktags morgen Ende",
+        "has_date": false,
+        "has_time": true
+      },
+      {
+        "id": "input_datetime_werktag_abends_ess_zimmer_start",
+        "has_time": true,
+        "has_date": false,
+        "name": "Werktags Abend Start"
+      },
+      {
+        "id": "input_datetime_werktag_abends_ess_zimmer_ende",
+        "name": "Werktag Abend Ende",
+        "has_date": false,
+        "has_time": true
+      },
+      {
+        "id": "input_datetime_wochenende_ess_zimmer_start",
+        "has_time": true,
+        "has_date": false,
+        "name": "Wochenende Start"
+      },
+      {
+        "id": "input_datetime_wochenende_ess_zimmer_ende",
+        "has_time": true,
+        "has_date": false,
+        "name": "Wochenende Ende"
+      },
+      {
+        "id": "esszimmer_heizung_boost_dauer",
+        "has_time": true,
+        "has_date": false,
+        "name": "Dauer Boost Heizung Esszimmer"
+      },
+      {
+        "id": "jalousie_oeffnungszeit",
+        "has_time": true,
+        "has_date": true,
+        "name": "jalousie_oeffnungszeit"
+      },
+      {
+        "id": "jalousie_schliesszeit",
+        "has_time": true,
+        "has_date": true,
+        "name": "jalousie_schliesszeit"
+      },
+      {
+        "id": "esszimmer_heizung_hand_boost_dauer",
+        "name": "Dauer Hand Boost Esszimmer",
+        "has_date": false,
+        "has_time": true
+      },
+      {
+        "id": "jalousie_oeffnungszeit_morgen",
+        "has_time": true,
+        "has_date": true,
+        "name": "jalousie_oeffnungszeit_morgen"
+      },
+      {
+        "id": "jalousie_schliesszeit_morgen",
+        "has_time": true,
+        "has_date": true,
+        "name": "jalousie_schliesszeit_morgen"
+      }
+    ]
+  }
+}

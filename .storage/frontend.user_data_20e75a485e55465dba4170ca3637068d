@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "frontend.user_data_20e75a485e55465dba4170ca3637068d",
+  "data": {
+    "core": {
+      "default_panel": "dashboard-christiane"
+    },
+    "sidebar": {
+      "panelOrder": [
+        "dashboard-christiane"
+      ],
+      "hiddenPanels": [
+        "map",
+        "media-browser",
+        "history",
+        "todo",
+        "calendar",
+        "logbook"
+      ]
+    }
+  }
+}

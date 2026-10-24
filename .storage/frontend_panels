@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "frontend_panels",
+  "data": {
+    "maintenance": {
+      "require_admin": true
+    },
+    "energy": {
+      "require_admin": true
+    },
+    "climate": {
+      "require_admin": true
+    },
+    "security": {
+      "require_admin": true
+    },
+    "light": {
+      "require_admin": true
+    }
+  }
+}

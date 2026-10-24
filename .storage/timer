@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "timer",
+  "data": {
+    "items": [
+      {
+        "id": "heizung_frank_boost",
+        "name": "Heizung Frank Boost",
+        "duration": "0:00:00",
+        "restore": false
+      },
+      {
+        "id": "timer_heizung_ess_zimmer_boost",
+        "name": "Timer Heizung Boost",
+        "duration": "0:00:00",
+        "restore": false
+      },
+      {
+        "id": "esszimmer_hand_timer_heizung_boost",
+        "name": "Timer Hand Boost ",
+        "restore": true,
+        "duration": "0:00:00"
+      }
+    ]
+  }
+}

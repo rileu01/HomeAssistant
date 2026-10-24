@@ -1,0 +1,87 @@
+heizung_frank_boost_starten:
+  alias: Heizung Frank - Boost starten
+  sequence:
+  - action: input_boolean.turn_off
+    target:
+      entity_id: input_boolean.heizung_frank_heizperiode_beendet
+  - action: timer.start
+    target:
+      entity_id: timer.heizung_frank_boost
+    data:
+      duration: "{% set minuten =\n  states('input_number.heizung_frank_boost_dauer')
+        | int %}\n{{ '%02d:%02d:00' | format(minuten // 60, minuten % 60) }}\n"
+  mode: restart
+heizung_frank_heizperiode_beenden:
+  alias: Heizung Frank - Heizperiode beenden
+  sequence:
+  - action: timer.cancel
+    target:
+      entity_id: timer.heizung_frank_boost
+  - action: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.heizung_frank_heizperiode_beendet
+  mode: restart
+heizung_ess_zimmer_boost_starten:
+  alias: Heizung Ess-Zimmer - Boost starten
+  sequence:
+  - action: input_boolean.turn_off
+    target:
+      entity_id: input_boolean.heizung_ess_zimmer_heizperiode_beendet
+    data: {}
+  - action: timer.start
+    target:
+      entity_id: timer.esszimmer_timer_heizung_boost
+    data:
+      duration: '{{ states(''input_datetime.esszimmer_heizung_boost_dauer'') }}
+
+        '
+  mode: restart
+heizung_ess_zimmer_heizperiode_beenden:
+  alias: Heizung Ess-Zimmer - Heizperiode beenden
+  sequence:
+  - action: timer.cancel
+    target:
+      entity_id: timer.esszimmer_timer_heizung_boost
+    data: {}
+  - action: input_boolean.turn_on
+    target:
+      entity_id: input_boolean.heizung_ess_zimmer_heizperiode_beendet
+    data: {}
+  mode: restart
+heizung_ess_zimmer_boost_beenden:
+  alias: Heizung Ess-Zimmer - Boost beenden
+  sequence:
+  - action: timer.cancel
+    target:
+      entity_id: timer.esszimmer_timer_heizung_boost
+  - action: input_number.set_value
+    target:
+      entity_id: input_number.boost_temperatur_ess_zimmer
+    data:
+      value: '{{ states(''input_number.heiztemperatur_ess_zimmer'') | float }}
+
+        '
+  mode: restart
+heizung_ess_zimmer_hand_boost_starten:
+  alias: Heizung Ess-Zimmer - Hand Boost starten
+  sequence:
+  - action: input_boolean.turn_off
+    target:
+      entity_id: input_boolean.heizung_ess_zimmer_heizperiode_beendet
+    data: {}
+  - action: timer.start
+    target:
+      entity_id: timer.esszimmer_hand_timer_heizung_boost
+    data:
+      duration: '{{ states(''input_datetime.esszimmer_heizung_hand_boost_dauer'')
+        }}
+
+        '
+  mode: restart
+heizung_ess_zimmer_hand_boost_beenden:
+  alias: Heizung Ess-Zimmer - Hand Boost beenden
+  sequence:
+  - action: timer.cancel
+    target:
+      entity_id: timer.esszimmer_hand_timer_heizung_boost
+  mode: restart

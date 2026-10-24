@@ -1,0 +1,294 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.werte_esszimmer",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.werktag_morgens_ess_zimmer_start",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 24,
+                    "rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.werktag_morgens_ess_zimmer_ende",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 24,
+                    "rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.werktag_abends_ess_zimmer_start",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 24,
+                    "rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.werktag_abends_ess_zimmer_ende",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 24,
+                    "rows": 1
+                  }
+                }
+              ],
+              "column_span": 2
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.wochenende_ess_zimmer_start",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 24,
+                    "rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.wochenende_ess_zimmer_ende",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 24,
+                    "rows": 1
+                  }
+                }
+              ],
+              "column_span": 2
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "grid_options": {
+                    "columns": 10,
+                    "rows": 1
+                  },
+                  "entity": "timer.esszimmer_timer_heizung_boost",
+                  "vertical": false,
+                  "features_position": "bottom"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.esszimmer_heizung_boost_dauer"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.heizung_ess_zimmer_heizperiode_beendet",
+                  "vertical": false,
+                  "features_position": "bottom",
+                  "grid_options": {
+                    "columns": 24,
+                    "rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "script.heizung_ess_zimmer_boost_starten",
+                  "features": [
+                    {
+                      "type": "button"
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 10,
+                    "rows": 2
+                  }
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.0x4c97a1fffe0bf615"
+                },
+                {
+                  "type": "tile",
+                  "entity": "script.heizung_ess_zimmer_boost_beenden",
+                  "features": [
+                    {
+                      "type": "button"
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 10,
+                    "rows": 2
+                  }
+                },
+                {
+                  "type": "gauge",
+                  "entity": "input_number.boost_temperatur_ess_zimmer"
+                }
+              ],
+              "column_span": 2
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "input_number.werktages_temperatur_ess_zimmer",
+                  "features": [
+                    {
+                      "type": "numeric-input"
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 24,
+                    "rows": 2
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.heiztemperatur_ess_zimmer",
+                  "features": [
+                    {
+                      "type": "numeric-input"
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 24,
+                    "rows": 2
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.absenktemperatur_ess_zimmer",
+                  "features": [
+                    {
+                      "type": "numeric-input"
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 24,
+                    "rows": 2
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.boost_verlaengerung_anwesenheit",
+                  "features": [
+                    {
+                      "type": "numeric-input"
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 2
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_boolean.einbeziehung_anwesenheit_ess_zimmer",
+                  "features": [
+                    {
+                      "type": "toggle"
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 2
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.0x8c65a3fffef75f0a_occupancy",
+                  "grid_options": {
+                    "columns": 7,
+                    "rows": 1
+                  }
+                }
+              ],
+              "column_span": 2
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "gauge",
+                  "entity": "input_number.hand_boost_temperatur_ess_zimmer"
+                },
+                {
+                  "type": "heading",
+                  "heading": "Neuer Abschnitt"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.esszimmer_heizung_hand_boost_dauer",
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "timer.esszimmer_hand_timer_heizung_boost",
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "script.heizung_ess_zimmer_hand_boost_starten",
+                  "features": [
+                    {
+                      "type": "button"
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 2
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "script.heizung_ess_zimmer_hand_boost_beenden",
+                  "features": [
+                    {
+                      "type": "button"
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 2
+                  }
+                }
+              ],
+              "column_span": 2
+            }
+          ],
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "# Zeit- und Temperatur für Ess-Zimmer\nHomeAssistant"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

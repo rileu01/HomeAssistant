@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "core.label_registry",
+  "data": {
+    "labels": [
+      {
+        "color": "purple",
+        "description": "Mobiltelefon mit Wlan-Ping als Entinität",
+        "icon": "mdi:cellphone",
+        "label_id": "handy",
+        "name": "Handy",
+        "created_at": "2026-09-29T17:59:02.814595+00:00",
+        "modified_at": "2026-09-29T17:59:02.814618+00:00"
+      }
+    ]
+  }
+}

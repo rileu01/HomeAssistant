@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.werte_wohnzimmer",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Neuer Abschnitt"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.jalousie_schliesszeit"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.jalousie_offnungszeit"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.offset_abenddaemmerung",
+                  "features": [
+                    {
+                      "type": "numeric-input"
+                    }
+                  ]
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.offset_morgendaemmerung",
+                  "features": [
+                    {
+                      "type": "numeric-input"
+                    }
+                  ]
+                },
+                {
+                  "type": "tile",
+                  "entity": "cover.0x842712fffebb9c51",
+                  "show_entity_picture": true,
+                  "state_content": "current_position",
+                  "vertical": false,
+                  "features": [
+                    {
+                      "type": "cover-open-close"
+                    }
+                  ],
+                  "features_position": "bottom"
+                }
+              ]
+            }
+          ],
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "# Hallo {{ user }} \nWerte für Wohnzimmer"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

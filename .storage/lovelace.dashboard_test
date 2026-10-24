@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.dashboard_test",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "type": "sections",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "input_number.absenktemperatur_frank_zimmer"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_number.heiztemperatur_frank_zimmer"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.werktag_morgens_start"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.werktag_morgens_ende"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.werktag_abends_start"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.werktag_abends_ende"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.wochenende_start"
+                },
+                {
+                  "type": "tile",
+                  "entity": "input_datetime.wochenende_ende"
+                },
+                {
+                  "type": "heading",
+                  "heading": "Neuer Abschnitt"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "timer.heizung_frank_boost"
+                },
+                {
+                  "type": "tile",
+                  "entity": "script.heizung_frank_boost_starten"
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.192_168_2_101"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "thermostat",
+                  "entity": "climate.0x0c2a6ffffe750972"
+                }
+              ]
+            }
+          ],
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "# Zeit- und Temperatur für Frank_Zimmer\nHomeAssistant"
+            }
+          },
+          "background": {
+            "opacity": 33,
+            "alignment": "center",
+            "size": "cover",
+            "repeat": "repeat",
+            "attachment": "fixed",
+            "image": {
+              "media_content_id": "media-source://image_upload/c5f9cd6e0ac1d5cf74f296a2d85a7b5a",
+              "media_content_type": "image/jpeg",
+              "metadata": {
+                "title": "1000067767.jpg",
+                "thumbnail": "/api/image/serve/c5f9cd6e0ac1d5cf74f296a2d85a7b5a/256x256",
+                "media_class": "image",
+                "navigateIds": [
+                  {},
+                  {
+                    "media_content_type": "app",
+                    "media_content_id": "media-source://image_upload"
+                  }
+                ]
+              }
+            }
+          },
+          "cards": [],
+          "max_columns": 4,
+          "title": "Temperatur und Zeit Parameter "
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1015 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {"entity_id":"update.home_assistant_supervisor_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2026.10.3","in_progress":false,"latest_version":"2026.10.3","release_summary":null,"release_url":"https://github.com/home-assistant/supervisor/releases/tag/2026.10.3","skipped_version":null,"title":"Home Assistant Supervisor","update_percentage":null,"entity_picture":"/api/brands/integration/hassio/icon.png?placeholder=no","friendly_name":"Home Assistant Supervisor Update","supported_features":5},"last_changed":"2026-10-24T14:08:43.369616+00:00","last_reported":"2026-10-24T14:08:43.369616+00:00","last_updated":"2026-10-24T14:08:43.369616+00:00","context":{"id":"01M5Q3W3V9DG9MKKJ82MSN738F","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_core_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2026.10.3","in_progress":false,"latest_version":"2026.10.3","release_summary":null,"release_url":"https://www.home-assistant.io/latest-release-notes/","skipped_version":null,"title":"Home Assistant Core","update_percentage":null,"entity_picture":"/api/brands/integration/homeassistant/icon.png?placeholder=no","friendly_name":"Home Assistant Core Update","supported_features":15},"last_changed":"2026-10-24T14:08:43.372535+00:00","last_reported":"2026-10-24T14:23:43.209978+00:00","last_updated":"2026-10-24T14:10:59.303450+00:00","context":{"id":"01M5Q408K7PX1ZAJ9K3DK3X41P","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"update.home_assistant_operating_system_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"18.3","in_progress":false,"latest_version":"18.3","release_summary":null,"release_url":"https://github.com/home-assistant/operating-system/releases/tag/18.3","skipped_version":null,"title":"Home Assistant Operating System","update_percentage":null,"entity_picture":"/api/brands/integration/homeassistant/icon.png?placeholder=no","friendly_name":"Home Assistant Operating System Update","supported_features":27},"last_changed":"2026-10-24T14:08:43.374550+00:00","last_reported":"2026-10-24T14:08:43.374550+00:00","last_updated":"2026-10-24T14:08:43.374550+00:00","context":{"id":"01M5Q3W3VEPDTHGGZJ704EM6GV","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"update.mosquitto_broker_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"7.1.2","in_progress":false,"latest_version":"7.1.2","release_summary":null,"release_url":null,"skipped_version":null,"title":"Mosquitto broker","update_percentage":null,"entity_picture":"/api/hassio/addons/core_mosquitto/icon","friendly_name":"Mosquitto broker Update","supported_features":29},"last_changed":"2026-10-24T14:08:43.376259+00:00","last_reported":"2026-10-24T14:08:43.376259+00:00","last_updated":"2026-10-24T14:08:43.376259+00:00","context":{"id":"01M5Q3W3VGQM93NHYRHXTJ3K4T","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"update.zigbee2mqtt_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2.14.2-1","in_progress":false,"latest_version":"2.14.2-1","release_summary":null,"release_url":null,"skipped_version":null,"title":"Zigbee2MQTT","update_percentage":null,"entity_picture":"/api/hassio/addons/45df7312_zigbee2mqtt/icon","friendly_name":"Zigbee2MQTT Update","supported_features":29},"last_changed":"2026-10-24T14:08:43.377832+00:00","last_reported":"2026-10-24T14:08:43.377832+00:00","last_updated":"2026-10-24T14:08:43.377832+00:00","context":{"id":"01M5Q3W3VH95GG1KDA3BQG776E","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"update.file_editor_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"6.3.0","in_progress":false,"latest_version":"6.3.0","release_summary":null,"release_url":null,"skipped_version":null,"title":"File editor","update_percentage":null,"entity_picture":"/api/hassio/addons/core_configurator/icon","friendly_name":"File editor Update","supported_features":29},"last_changed":"2026-10-24T14:08:43.379567+00:00","last_reported":"2026-10-24T14:08:43.379567+00:00","last_updated":"2026-10-24T14:08:43.379567+00:00","context":{"id":"01M5Q3W3VKZ9QPDS24TY8RMW7P","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"update.samba_share_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"12.10.0","in_progress":false,"latest_version":"12.10.0","release_summary":null,"release_url":null,"skipped_version":null,"title":"Samba share","update_percentage":null,"entity_picture":"/api/hassio/addons/core_samba/icon","friendly_name":"Samba share Update","supported_features":29},"last_changed":"2026-10-24T14:08:43.381520+00:00","last_reported":"2026-10-24T14:08:43.381520+00:00","last_updated":"2026-10-24T14:08:43.381520+00:00","context":{"id":"01M5Q3W3VN1J83CN8DTR7G1JM1","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"update.advanced_ssh_web_terminal_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"24.2.0","in_progress":false,"latest_version":"24.2.0","release_summary":null,"release_url":null,"skipped_version":null,"title":"Advanced SSH & Web Terminal","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_ssh/icon","friendly_name":"Advanced SSH & Web Terminal Update","supported_features":29},"last_changed":"2026-10-24T14:08:43.383811+00:00","last_reported":"2026-10-24T14:08:43.383811+00:00","last_updated":"2026-10-24T14:08:43.383811+00:00","context":{"id":"01M5Q3W3VQ2N7HK7WRZ997JP33","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"conversation.home_assistant","state":"2026-09-26T17:21:24.769242+00:00","attributes":{"friendly_name":"Home Assistant","supported_features":1},"last_changed":"2026-10-24T14:08:49.604776+00:00","last_reported":"2026-10-24T14:08:49.604776+00:00","last_updated":"2026-10-24T14:08:49.604776+00:00","context":{"id":"01M5Q3W9Y4JENE7XVHDGGFS5NS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"event.backup_automatic_backup","state":"2026-10-24T13:46:10.211+00:00","attributes":{"event_types":["completed","failed","in_progress"],"event_type":"completed","backup_stage":null,"failed_reason":null,"friendly_name":"Backup Automatisches Backup"},"last_changed":"2026-10-24T14:09:12.176249+00:00","last_reported":"2026-10-24T14:09:12.176249+00:00","last_updated":"2026-10-24T14:09:12.176249+00:00","context":{"id":"01M5Q3WZZG5A8M9WNSD4G5PA9K","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": "completed",
+        "last_event_attributes": {
+          "backup_stage": null,
+          "failed_reason": null
+        }
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"script.heizung_frank_boost_starten","state":"off","attributes":{"last_triggered":"2026-10-22T18:15:32.642557+00:00","mode":"restart","current":0,"friendly_name":"Heizung Frank - Boost starten"},"last_changed":"2026-10-24T14:09:18.796698+00:00","last_reported":"2026-10-24T14:09:18.796698+00:00","last_updated":"2026-10-24T14:09:18.796698+00:00","context":{"id":"01M5Q3X6ECEJ3GBHE87HN07A74","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"script.heizung_frank_heizperiode_beenden","state":"off","attributes":{"last_triggered":null,"mode":"restart","current":0,"friendly_name":"Heizung Frank - Heizperiode beenden"},"last_changed":"2026-10-24T14:09:18.798576+00:00","last_reported":"2026-10-24T14:09:18.798576+00:00","last_updated":"2026-10-24T14:09:18.798576+00:00","context":{"id":"01M5Q3X6EEGY00XMC7KS8JQ435","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"script.heizung_ess_zimmer_boost_starten","state":"off","attributes":{"last_triggered":"2026-10-19T21:40:26.050133+00:00","mode":"restart","current":0,"friendly_name":"Heizung Ess-Zimmer - Boost starten"},"last_changed":"2026-10-24T14:09:18.799740+00:00","last_reported":"2026-10-24T14:09:18.799740+00:00","last_updated":"2026-10-24T14:09:18.799740+00:00","context":{"id":"01M5Q3X6EFDA9E6852XNDVAK6K","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"script.heizung_ess_zimmer_heizperiode_beenden","state":"off","attributes":{"last_triggered":null,"mode":"restart","current":0,"friendly_name":"Heizung Ess-Zimmer - Heizperiode beenden"},"last_changed":"2026-10-24T14:09:18.800721+00:00","last_reported":"2026-10-24T14:09:18.800721+00:00","last_updated":"2026-10-24T14:09:18.800721+00:00","context":{"id":"01M5Q3X6EG8BWS2520TXYXT806","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"script.heizung_ess_zimmer_boost_beenden","state":"off","attributes":{"last_triggered":"2026-10-19T21:40:30.512578+00:00","mode":"restart","current":0,"friendly_name":"Heizung Ess-Zimmer - Boost beenden"},"last_changed":"2026-10-24T14:09:18.802014+00:00","last_reported":"2026-10-24T14:09:18.802014+00:00","last_updated":"2026-10-24T14:09:18.802014+00:00","context":{"id":"01M5Q3X6EJMVD16EGTWH7J3DZD","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"script.heizung_ess_zimmer_hand_boost_starten","state":"off","attributes":{"last_triggered":"2026-10-24T14:27:05.891497+00:00","mode":"restart","current":0,"friendly_name":"Start  des Hand Boost in Ess-Zimmer"},"last_changed":"2026-10-24T14:27:05.940235+00:00","last_reported":"2026-10-24T14:27:05.940235+00:00","last_updated":"2026-10-24T14:27:05.940235+00:00","context":{"id":"01M5Q4XRGPNP59SVRPP5NBTJEM","parent_id":null,"user_id":"20e75a485e55465dba4170ca3637068d"}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"script.heizung_ess_zimmer_hand_boost_beenden","state":"off","attributes":{"last_triggered":"2026-10-24T09:55:26.572032+00:00","mode":"restart","current":0,"friendly_name":"Beenden des Hand Boost im Ess-Zimmer"},"last_changed":"2026-10-24T14:09:18.804582+00:00","last_reported":"2026-10-24T14:09:18.804582+00:00","last_updated":"2026-10-24T14:09:18.804582+00:00","context":{"id":"01M5Q3X6EMSNXSVJT3P59ESTX2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.heiztemperatur_frank_zimmer","state":"20.5","attributes":{"min":15.0,"max":25.0,"step":0.5,"mode":"slider","initial":null,"editable":true,"unit_of_measurement":"°C","friendly_name":"Heiztemperatur Frank Zimmer"},"last_changed":"2026-10-24T14:09:18.888488+00:00","last_reported":"2026-10-24T14:09:18.888488+00:00","last_updated":"2026-10-24T14:09:18.888488+00:00","context":{"id":"01M5Q3X6H89F2NC93QRPRWQZZS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.absenktemperatur_frank_zimmer","state":"17.0","attributes":{"min":10.0,"max":18.0,"step":0.5,"mode":"slider","initial":null,"editable":true,"unit_of_measurement":"°C","friendly_name":"Absenktemperatur Frank Zimmer"},"last_changed":"2026-10-24T14:09:18.889941+00:00","last_reported":"2026-10-24T14:09:18.889941+00:00","last_updated":"2026-10-24T14:09:18.889941+00:00","context":{"id":"01M5Q3X6H9QGKRH9QNX54MNQTE","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.heizung_frank_boost_dauer","state":"15.0","attributes":{"min":15.0,"max":240.0,"step":15.0,"mode":"slider","initial":null,"editable":true,"unit_of_measurement":"min","friendly_name":"Heizung Frank Boost Dauer"},"last_changed":"2026-10-24T14:09:18.897661+00:00","last_reported":"2026-10-24T14:09:18.897661+00:00","last_updated":"2026-10-24T14:09:18.897661+00:00","context":{"id":"01M5Q3X6HHRYR9MNJA0BARH8V9","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.absenktemperatur_ess_zimmer","state":"15.0","attributes":{"min":10.0,"max":25.0,"step":0.5,"mode":"box","initial":null,"editable":true,"unit_of_measurement":"°C","friendly_name":"Absenktemperatur Esszimmer"},"last_changed":"2026-10-24T14:09:18.898721+00:00","last_reported":"2026-10-24T14:09:18.898721+00:00","last_updated":"2026-10-24T14:09:18.898721+00:00","context":{"id":"01M5Q3X6HJR8ZBWP7NGC4DNTV3","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.heiztemperatur_ess_zimmer","state":"20.0","attributes":{"min":10.0,"max":25.0,"step":0.5,"mode":"slider","initial":null,"editable":true,"unit_of_measurement":"°C","friendly_name":"Heiztemperatur Esszimmer Wochenende Comfort"},"last_changed":"2026-10-24T14:09:18.899825+00:00","last_reported":"2026-10-24T14:09:18.899825+00:00","last_updated":"2026-10-24T14:09:18.899825+00:00","context":{"id":"01M5Q3X6HKKNNHJN3J7DVEC7VF","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.offset_abenddaemmerung","state":"-35.0","attributes":{"min":-240.0,"max":240.0,"step":1.0,"mode":"box","initial":null,"editable":true,"unit_of_measurement":"min","friendly_name":"Offset Abend Dämmerung"},"last_changed":"2026-10-24T14:09:18.900794+00:00","last_reported":"2026-10-24T14:09:18.900794+00:00","last_updated":"2026-10-24T14:09:18.900794+00:00","context":{"id":"01M5Q3X6HMF3VCWB627GDPJ14W","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.offset_morgendaemmerung","state":"20.0","attributes":{"min":-240.0,"max":240.0,"step":1.0,"mode":"box","initial":null,"editable":true,"unit_of_measurement":"min","friendly_name":"offset Morgen Dämmerung"},"last_changed":"2026-10-24T14:09:18.907001+00:00","last_reported":"2026-10-24T14:09:18.907001+00:00","last_updated":"2026-10-24T14:09:18.907001+00:00","context":{"id":"01M5Q3X6HV60D9G8KF8HH3YEJH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.werktages_temperatur_ess_zimmer","state":"17.0","attributes":{"min":15.0,"max":35.0,"step":0.5,"mode":"slider","initial":null,"editable":true,"unit_of_measurement":"°C","friendly_name":"Werktags Temperatur Esszimmer"},"last_changed":"2026-10-24T14:09:18.908278+00:00","last_reported":"2026-10-24T14:09:18.908278+00:00","last_updated":"2026-10-24T14:09:18.908278+00:00","context":{"id":"01M5Q3X6HWM97E90K0GDSX3KM6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.boost_verlaengerung_anwesenheit","state":"15.0","attributes":{"min":0.0,"max":240.0,"step":1.0,"mode":"box","initial":null,"editable":true,"unit_of_measurement":"min","friendly_name":"Boost Verlängerung bei Anwesenheit"},"last_changed":"2026-10-24T14:09:18.909524+00:00","last_reported":"2026-10-24T14:09:18.909524+00:00","last_updated":"2026-10-24T14:09:18.909524+00:00","context":{"id":"01M5Q3X6HX04EAGQDPQKSJE9FE","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.hand_boost_temperatur_ess_zimmer","state":"20.0","attributes":{"min":15.0,"max":35.0,"step":0.5,"mode":"slider","initial":null,"editable":true,"unit_of_measurement":"°C","friendly_name":"Hand Boost Temperatur Esszimmer"},"last_changed":"2026-10-24T14:09:18.910589+00:00","last_reported":"2026-10-24T14:09:18.910589+00:00","last_updated":"2026-10-24T14:09:18.910589+00:00","context":{"id":"01M5Q3X6HYCVC53BWEC8BEVNKD","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.boost_temperatur_ess_zimmer","state":"20.0","attributes":{"min":15.0,"max":35.0,"step":0.5,"mode":"slider","initial":null,"editable":true,"unit_of_measurement":"°C","friendly_name":"Boost Temperatur Esszimmer"},"last_changed":"2026-10-24T14:09:18.911606+00:00","last_reported":"2026-10-24T14:09:18.911606+00:00","last_updated":"2026-10-24T14:09:18.911606+00:00","context":{"id":"01M5Q3X6HZXPX4HJ75Y3VPXQRH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.heizung_frank_heizperiode_beendet","state":"off","attributes":{"editable":true,"friendly_name":"Frank Heizung ausschalten "},"last_changed":"2026-10-24T14:09:18.913802+00:00","last_reported":"2026-10-24T14:09:18.913802+00:00","last_updated":"2026-10-24T14:09:18.913802+00:00","context":{"id":"01M5Q3X6J1VV6TFG28354CQD5M","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.heizung_ess_zimmer_heizperiode_beendet","state":"off","attributes":{"editable":true,"friendly_name":"Heizung Esszimmer ausschalten"},"last_changed":"2026-10-24T14:09:18.914827+00:00","last_reported":"2026-10-24T14:09:18.914827+00:00","last_updated":"2026-10-24T14:09:18.914827+00:00","context":{"id":"01M5Q3X6J292QDE3J84CSZEN5Y","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.einbeziehung_anwesenheit_ess_zimmer","state":"off","attributes":{"editable":true,"friendly_name":"Einbeziehung Anwesenheit Esszimmer"},"last_changed":"2026-10-24T14:09:18.915564+00:00","last_reported":"2026-10-24T14:09:18.915564+00:00","last_updated":"2026-10-24T14:09:18.915564+00:00","context":{"id":"01M5Q3X6J33GMJSS5Q878PNPAD","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"timer.heizung_frank_boost","state":"idle","attributes":{"duration":"0:00:00","editable":true,"last_transition":null,"friendly_name":"Heizung Frank Boost"},"last_changed":"2026-10-24T14:09:18.917796+00:00","last_reported":"2026-10-24T14:09:18.917796+00:00","last_updated":"2026-10-24T14:09:18.917796+00:00","context":{"id":"01M5Q3X6J5F46ZT2TW348HKZXT","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"timer.esszimmer_timer_heizung_boost","state":"idle","attributes":{"duration":"0:00:00","editable":true,"last_transition":null,"friendly_name":"Timer Heizung Boost"},"last_changed":"2026-10-24T14:09:18.919273+00:00","last_reported":"2026-10-24T14:09:18.919273+00:00","last_updated":"2026-10-24T14:09:18.919273+00:00","context":{"id":"01M5Q3X6J7NS8R5B726JK9C098","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"timer.esszimmer_hand_timer_heizung_boost","state":"active","attributes":{"duration":"2:30:00","editable":true,"last_transition":"started","finishes_at":"2026-10-24T16:57:05+00:00","remaining":"2:30:00","restore":true,"friendly_name":"Timer Hand Boost "},"last_changed":"2026-10-24T14:27:05.912165+00:00","last_reported":"2026-10-24T14:27:05.912165+00:00","last_updated":"2026-10-24T14:27:05.912165+00:00","context":{"id":"01M5Q4XRGPNP59SVRPP5NBTJEM","parent_id":null,"user_id":"20e75a485e55465dba4170ca3637068d"}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"person.frank_leutheuser","state":"home","attributes":{"editable":true,"id":"frank_leutheuser","device_trackers":["device_tracker.s24ultra","device_tracker.sm_p610"],"in_zones":["zone.home"],"latitude":50.578603,"longitude":10.42271,"gps_accuracy":100.0,"source":"device_tracker.sm_p610","user_id":"d3d8b03220d84003b25aa6c20ba3cdbd","friendly_name":"Frank Leutheuser"},"last_changed":"2026-10-24T14:09:18.993671+00:00","last_reported":"2026-10-24T14:50:36.659702+00:00","last_updated":"2026-10-24T14:50:36.659702+00:00","context":{"id":"01M5Q68T7KZWD5W7D2JYPKXX9Z","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"person.christiane_schroter","state":"home","attributes":{"editable":true,"id":"christiane_schroter","device_trackers":["device_tracker.sm_p610","device_tracker.pot_lx1"],"in_zones":["zone.home"],"latitude":50.578603,"longitude":10.42271,"gps_accuracy":100.0,"source":"device_tracker.sm_p610","user_id":"20e75a485e55465dba4170ca3637068d","friendly_name":"Christiane Schröter"},"last_changed":"2026-10-24T14:09:18.996191+00:00","last_reported":"2026-10-24T14:19:36.490192+00:00","last_updated":"2026-10-24T14:09:44.055791+00:00","context":{"id":"01M5Q3XZ3Q1GY53817HEY31QRM","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.werktag_morgens_start","state":"04:30:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":4,"minute":30,"second":0,"timestamp":16200,"friendly_name":"Werktag morgens Start"},"last_changed":"2026-10-24T14:09:26.183307+00:00","last_reported":"2026-10-24T14:09:26.183307+00:00","last_updated":"2026-10-24T14:09:26.183307+00:00","context":{"id":"01M5Q3XDN7C8HVXBYPXTTFZJG0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.werktag_morgens_ende","state":"05:45:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":5,"minute":45,"second":0,"timestamp":20700,"friendly_name":"Werktag morgens Ende"},"last_changed":"2026-10-24T14:09:26.185052+00:00","last_reported":"2026-10-24T14:09:26.185052+00:00","last_updated":"2026-10-24T14:09:26.185052+00:00","context":{"id":"01M5Q3XDN9P2BM8Q1GJ06E7K06","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.werktag_abends_start","state":"16:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":16,"minute":0,"second":0,"timestamp":57600,"friendly_name":"Werktag abends Start"},"last_changed":"2026-10-24T14:09:26.186741+00:00","last_reported":"2026-10-24T14:09:26.186741+00:00","last_updated":"2026-10-24T14:09:26.186741+00:00","context":{"id":"01M5Q3XDNA525SWTK3T734P58B","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.werktag_abends_ende","state":"23:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":23,"minute":0,"second":0,"timestamp":82800,"friendly_name":"Werktag abends Ende"},"last_changed":"2026-10-24T14:09:26.188079+00:00","last_reported":"2026-10-24T14:09:26.188079+00:00","last_updated":"2026-10-24T14:09:26.188079+00:00","context":{"id":"01M5Q3XDNCN7YCR6841BDYWSEA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.wochenende_start","state":"06:30:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":6,"minute":30,"second":0,"timestamp":23400,"friendly_name":"Wochenende Start"},"last_changed":"2026-10-24T14:09:26.189341+00:00","last_reported":"2026-10-24T14:09:26.189341+00:00","last_updated":"2026-10-24T14:09:26.189341+00:00","context":{"id":"01M5Q3XDNDJVW2BGHA27ZSMQ0F","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.wochenende_ende","state":"23:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":23,"minute":0,"second":0,"timestamp":82800,"friendly_name":"Wochenende Ende"},"last_changed":"2026-10-24T14:09:26.190498+00:00","last_reported":"2026-10-24T14:09:26.190498+00:00","last_updated":"2026-10-24T14:09:26.190498+00:00","context":{"id":"01M5Q3XDNEWAJJNBFYW1G81CW2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.werktag_morgens_ess_zimmer_start","state":"08:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":8,"minute":0,"second":0,"timestamp":28800,"friendly_name":"Werktags morgens Start"},"last_changed":"2026-10-24T14:09:26.191533+00:00","last_reported":"2026-10-24T14:09:26.191533+00:00","last_updated":"2026-10-24T14:09:26.191533+00:00","context":{"id":"01M5Q3XDNFC7M0X8TQS84CNBG8","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.werktag_morgens_ess_zimmer_ende","state":"16:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":16,"minute":0,"second":0,"timestamp":57600,"friendly_name":"Werktags morgen Ende"},"last_changed":"2026-10-24T14:09:26.193148+00:00","last_reported":"2026-10-24T14:09:26.193148+00:00","last_updated":"2026-10-24T14:09:26.193148+00:00","context":{"id":"01M5Q3XDNHJ2FR38HTEJGP6MPP","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.werktag_abends_ess_zimmer_start","state":"16:30:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":16,"minute":30,"second":0,"timestamp":59400,"friendly_name":"Werktags Abend Start"},"last_changed":"2026-10-24T14:09:26.194461+00:00","last_reported":"2026-10-24T14:09:26.194461+00:00","last_updated":"2026-10-24T14:09:26.194461+00:00","context":{"id":"01M5Q3XDNJA2QH8B644S3WZ6N5","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.werktag_abends_ess_zimmer_ende","state":"23:17:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":23,"minute":17,"second":0,"timestamp":83820,"friendly_name":"Werktag Abend Ende"},"last_changed":"2026-10-24T14:09:26.195681+00:00","last_reported":"2026-10-24T14:09:26.195681+00:00","last_updated":"2026-10-24T14:09:26.195681+00:00","context":{"id":"01M5Q3XDNKG1F96HD8Q8TRBR80","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.wochenende_ess_zimmer_start","state":"07:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":7,"minute":0,"second":0,"timestamp":25200,"friendly_name":"Wochenende Start"},"last_changed":"2026-10-24T14:09:26.197695+00:00","last_reported":"2026-10-24T14:09:26.197695+00:00","last_updated":"2026-10-24T14:09:26.197695+00:00","context":{"id":"01M5Q3XDNN61T83RSBA9PV9FHW","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.wochenende_ess_zimmer_ende","state":"23:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":23,"minute":0,"second":0,"timestamp":82800,"friendly_name":"Wochenende Ende"},"last_changed":"2026-10-24T14:09:26.199603+00:00","last_reported":"2026-10-24T14:09:26.199603+00:00","last_updated":"2026-10-24T14:09:26.199603+00:00","context":{"id":"01M5Q3XDNQCNGZ6YQMR39BMF5B","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.esszimmer_heizung_boost_dauer","state":"03:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":3,"minute":0,"second":0,"timestamp":10800,"friendly_name":"Dauer Boost Heizung Esszimmer"},"last_changed":"2026-10-24T14:09:26.201789+00:00","last_reported":"2026-10-24T14:09:26.201789+00:00","last_updated":"2026-10-24T14:09:26.201789+00:00","context":{"id":"01M5Q3XDNSW9CP7VX6NKYA0NNA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.jalousie_oeffnungszeit","state":"2026-10-24 07:41:39","attributes":{"has_date":true,"has_time":true,"editable":true,"year":2026,"month":10,"day":24,"hour":7,"minute":41,"second":39,"timestamp":1792820499.0,"friendly_name":"jalousie_oeffnungszeit"},"last_changed":"2026-10-24T14:09:26.204099+00:00","last_reported":"2026-10-24T14:09:26.204099+00:00","last_updated":"2026-10-24T14:09:26.204099+00:00","context":{"id":"01M5Q3XDNW74KJGGHAPDCQP60Q","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.jalousie_schliesszeit","state":"2026-10-24 18:07:27","attributes":{"has_date":true,"has_time":true,"editable":true,"year":2026,"month":10,"day":24,"hour":18,"minute":7,"second":27,"timestamp":1792858047.0,"friendly_name":"jalousie_schliesszeit"},"last_changed":"2026-10-24T14:09:26.205436+00:00","last_reported":"2026-10-24T14:09:26.205436+00:00","last_updated":"2026-10-24T14:09:26.205436+00:00","context":{"id":"01M5Q3XDNXA9SZB42D0V3MVX04","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.esszimmer_heizung_hand_boost_dauer","state":"02:30:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":2,"minute":30,"second":0,"timestamp":9000,"friendly_name":"Dauer Hand Boost Esszimmer"},"last_changed":"2026-10-24T14:09:26.206544+00:00","last_reported":"2026-10-24T14:09:26.206544+00:00","last_updated":"2026-10-24T14:09:26.206544+00:00","context":{"id":"01M5Q3XDNYAVGENGNSQ6EMH4S0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.jalousie_oeffnungszeit_morgen","state":"2026-10-25 08:00:00","attributes":{"has_date":true,"has_time":true,"editable":true,"year":2026,"month":10,"day":25,"hour":8,"minute":0,"second":0,"timestamp":1792911600.0,"friendly_name":"jalousie_oeffnungszeit_morgen"},"last_changed":"2026-10-24T14:09:26.207642+00:00","last_reported":"2026-10-24T14:09:26.207642+00:00","last_updated":"2026-10-24T14:09:26.207642+00:00","context":{"id":"01M5Q3XDNZH1K1BGAA5Z5HZ6GG","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.jalousie_schliesszeit_morgen","state":"2026-10-25 18:00:00","attributes":{"has_date":true,"has_time":true,"editable":true,"year":2026,"month":10,"day":25,"hour":18,"minute":0,"second":0,"timestamp":1792947600.0,"friendly_name":"jalousie_schliesszeit_morgen"},"last_changed":"2026-10-24T14:09:26.209211+00:00","last_reported":"2026-10-24T14:09:26.209211+00:00","last_updated":"2026-10-24T14:09:26.209211+00:00","context":{"id":"01M5Q3XDP1QV40G9B9F48MGZTP","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.jalousie_offnungszeit","state":"2026-10-25T05:43:15+00:00","attributes":{"device_class":"timestamp","friendly_name":"Jalousie Öffnungszeit"},"last_changed":"2026-10-24T14:09:30.603825+00:00","last_reported":"2026-10-24T14:09:30.603825+00:00","last_updated":"2026-10-24T14:09:30.603825+00:00","context":{"id":"01M5Q3XHZBPW6HCMVWMKFJDWPX","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'datetime.datetime'>",
+          "isoformat": "2026-10-25T05:43:15.329525+00:00"
+        },
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.jalousie_schliesszeit","state":"2026-10-24T16:07:27+00:00","attributes":{"device_class":"timestamp","friendly_name":"Jalousie Schließzeit"},"last_changed":"2026-10-24T14:09:30.605650+00:00","last_reported":"2026-10-24T14:09:30.605650+00:00","last_updated":"2026-10-24T14:09:30.605650+00:00","context":{"id":"01M5Q3XHZDE3C2DYXQBSFK1RK1","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": {
+          "__type": "<class 'datetime.datetime'>",
+          "isoformat": "2026-10-24T16:07:27.605219+00:00"
+        },
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.s24ultra","state":"home","attributes":{"tracking_type":"position","in_zones":["zone.home"],"source_type":"gps","latitude":50.5781905,"longitude":10.4224429,"gps_accuracy":100.0,"altitude":358.0,"course":0,"speed":0,"vertical_accuracy":100,"friendly_name":"S24Ultra"},"last_changed":"2026-10-24T14:48:28.505477+00:00","last_reported":"2026-10-24T14:48:28.505477+00:00","last_updated":"2026-10-24T14:48:28.505477+00:00","context":{"id":"01M5Q64X2S5GKZ4AKVRGBD2X42","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "data": {
+          "gps": [
+            50.5781905,
+            10.4224429
+          ],
+          "gps_accuracy": 100.0,
+          "speed": 0,
+          "altitude": 358.0,
+          "course": 0,
+          "vertical_accuracy": 100
+        }
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"notify.s24ultra","state":"unknown","attributes":{"friendly_name":"S24Ultra","supported_features":1},"last_changed":"2026-10-24T14:09:35.766970+00:00","last_reported":"2026-10-24T14:09:35.766970+00:00","last_updated":"2026-10-24T14:09:35.766970+00:00","context":{"id":"01M5Q3XQ0PZEQ5TEWQ5KDWC6PM","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.s24ultra_battery_level","state":"71","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-70","friendly_name":"S24Ultra Battery level"},"last_changed":"2026-10-24T14:09:35.772355+00:00","last_reported":"2026-10-24T14:09:35.772355+00:00","last_updated":"2026-10-24T14:09:35.772355+00:00","context":{"id":"01M5Q3XQ0WPX9Z9FET1HCX8HY1","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 71,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.s24ultra_battery_state","state":"discharging","attributes":{"options":["charging","discharging","full","not_charging"],"device_class":"enum","icon":"mdi:battery-minus","friendly_name":"S24Ultra Battery state"},"last_changed":"2026-10-24T14:09:35.774338+00:00","last_reported":"2026-10-24T14:09:35.774338+00:00","last_updated":"2026-10-24T14:09:35.774338+00:00","context":{"id":"01M5Q3XQ0Y04F1T905SYZPY9R8","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "discharging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.s24ultra_charger_type","state":"none","attributes":{"options":["ac","usb","wireless","dock","none"],"device_class":"enum","icon":"mdi:battery","friendly_name":"S24Ultra Charger type"},"last_changed":"2026-10-24T14:09:35.776073+00:00","last_reported":"2026-10-24T14:09:35.776073+00:00","last_updated":"2026-10-24T14:09:35.776073+00:00","context":{"id":"01M5Q3XQ10BZBFZMA2V4QNBW6H","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "none",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.pot_lx1","state":"unknown","attributes":{"tracking_type":"position","in_zones":[],"source_type":"gps","friendly_name":"POT-LX1"},"last_changed":"2026-10-24T14:09:35.781644+00:00","last_reported":"2026-10-24T14:09:35.781644+00:00","last_updated":"2026-10-24T14:09:35.781644+00:00","context":{"id":"01M5Q3XQ15T3J8BXP65GQTQS7J","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "data": {}
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"notify.pot_lx1","state":"unknown","attributes":{"friendly_name":"POT-LX1","supported_features":1},"last_changed":"2026-10-24T14:09:35.784410+00:00","last_reported":"2026-10-24T14:09:35.784410+00:00","last_updated":"2026-10-24T14:09:35.784410+00:00","context":{"id":"01M5Q3XQ18E40JGKJZ09HXY6S0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.pot_lx1_battery_level","state":"48","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-charging-40","friendly_name":"POT-LX1 Battery level"},"last_changed":"2026-10-24T14:41:52.916695+00:00","last_reported":"2026-10-24T14:41:52.916695+00:00","last_updated":"2026-10-24T14:41:52.916695+00:00","context":{"id":"01M5Q5RTRM3TZF4WTDEFR5VYB4","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 48,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.pot_lx1_battery_state","state":"charging","attributes":{"options":["charging","discharging","full","not_charging"],"device_class":"enum","icon":"mdi:battery-plus","friendly_name":"POT-LX1 Battery state"},"last_changed":"2026-10-24T14:25:35.609338+00:00","last_reported":"2026-10-24T14:25:42.341170+00:00","last_updated":"2026-10-24T14:25:35.609338+00:00","context":{"id":"01M5Q4V0BSY3BVSFKR9V1X1EJR","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "charging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.pot_lx1_charger_type","state":"ac","attributes":{"options":["ac","usb","wireless","dock","none"],"device_class":"enum","icon":"mdi:power-plug","friendly_name":"POT-LX1 Charger type"},"last_changed":"2026-10-24T14:25:35.991565+00:00","last_reported":"2026-10-24T14:25:42.341613+00:00","last_updated":"2026-10-24T14:25:35.991565+00:00","context":{"id":"01M5Q4V0QQMTW1J4NC2RTWVXWA","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "ac",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"device_tracker.sm_p610","state":"home","attributes":{"tracking_type":"position","in_zones":["zone.home"],"source_type":"gps","latitude":50.578603,"longitude":10.42271,"gps_accuracy":100.0,"altitude":359.0,"course":0,"speed":0,"vertical_accuracy":100,"friendly_name":"SM-P610"},"last_changed":"2026-10-24T14:50:36.658290+00:00","last_reported":"2026-10-24T14:50:36.658290+00:00","last_updated":"2026-10-24T14:50:36.658290+00:00","context":{"id":"01M5Q68T7JC8AMEDDYQYHK1EQV","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "data": {
+          "gps": [
+            50.578603,
+            10.42271
+          ],
+          "gps_accuracy": 100.0,
+          "speed": 0,
+          "altitude": 359.0,
+          "course": 0,
+          "vertical_accuracy": 100
+        }
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"notify.sm_p610","state":"unknown","attributes":{"friendly_name":"SM-P610","supported_features":1},"last_changed":"2026-10-24T14:09:35.805743+00:00","last_reported":"2026-10-24T14:09:35.805743+00:00","last_updated":"2026-10-24T14:09:35.805743+00:00","context":{"id":"01M5Q3XQ1XSSQXDMHWR7YPZ0NS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.sm_p610_battery_level","state":"58","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-50","friendly_name":"SM-P610 Battery level"},"last_changed":"2026-10-24T14:19:39.026895+00:00","last_reported":"2026-10-24T14:19:43.555008+00:00","last_updated":"2026-10-24T14:19:39.026895+00:00","context":{"id":"01M5Q4G44J8MZ6846RBSWXM83P","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": 58,
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.sm_p610_battery_state","state":"discharging","attributes":{"options":["charging","discharging","full","not_charging"],"device_class":"enum","icon":"mdi:battery-minus","friendly_name":"SM-P610 Battery state"},"last_changed":"2026-10-24T14:09:35.811519+00:00","last_reported":"2026-10-24T14:09:35.811519+00:00","last_updated":"2026-10-24T14:09:35.811519+00:00","context":{"id":"01M5Q3XQ23WK3JH29SX4KJPY8T","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "discharging",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.sm_p610_charger_type","state":"none","attributes":{"options":["ac","usb","wireless","dock","none"],"device_class":"enum","icon":"mdi:battery","friendly_name":"SM-P610 Charger type"},"last_changed":"2026-10-24T14:09:35.813358+00:00","last_reported":"2026-10-24T14:09:35.813358+00:00","last_updated":"2026-10-24T14:09:35.813358+00:00","context":{"id":"01M5Q3XQ25KJVY20KB7ACJC3YN","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "none",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"tts.google_ubersetzer_en_com_google_translate_en_com","state":"unknown","attributes":{"friendly_name":"Google Übersetzer en com Google Translate en com"},"last_changed":"2026-10-24T14:09:35.954185+00:00","last_reported":"2026-10-24T14:09:35.954185+00:00","last_updated":"2026-10-24T14:09:35.954185+00:00","context":{"id":"01M5Q3XQ6JB5DQD3SNKP0RNP6M","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.heizung_frank_zeit_und_anwesenheit","state":"on","attributes":{"id":"1790706276777","last_triggered":"2026-10-24T14:50:00.187258+00:00","mode":"restart","current":0,"friendly_name":"Heizung Frank - Zeit Anwesenheit Feiertage Boost"},"last_changed":"2026-10-24T14:09:43.988327+00:00","last_reported":"2026-10-24T14:50:00.204363+00:00","last_updated":"2026-10-24T14:50:00.204363+00:00","context":{"id":"01M5Q67PKSMHHPWSCGQWWE2F1D","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.heizung_frank_heizperiodensperre_zurucksetzen","state":"on","attributes":{"id":"1790978711532","last_triggered":"2026-10-17T21:00:00.450490+00:00","mode":"restart","current":0,"friendly_name":"Heizung Frank - Heizperiodensperre zurücksetzen"},"last_changed":"2026-10-24T14:09:43.989705+00:00","last_reported":"2026-10-24T14:09:43.989705+00:00","last_updated":"2026-10-24T14:09:43.989705+00:00","context":{"id":"01M5Q3XZ1NJ69YRHGTGQQ32S86","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.jalousie_steuerung_nach_dammerung_bosch_bmct_slz","state":"on","attributes":{"id":"1792241357804","last_triggered":"2026-10-24T14:09:44.383474+00:00","mode":"restart","current":0,"friendly_name":"Jalousie: Dämmerungssteuerung mit Offset"},"last_changed":"2026-10-24T14:09:43.990717+00:00","last_reported":"2026-10-24T14:10:37.368709+00:00","last_updated":"2026-10-24T14:10:37.368709+00:00","context":{"id":"01M5Q3ZK5RH25JE56KKG5Z2B4W","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.heizung_ess_zimmer_heizperiodensperre_zurucksetzen","state":"on","attributes":{"id":"1792301455295","last_triggered":"2026-10-24T14:00:11.765885+00:00","mode":"restart","current":0,"friendly_name":"Heizung Ess-Zimmer - Heizperiodensperre zurücksetzen"},"last_changed":"2026-10-24T14:09:43.991630+00:00","last_reported":"2026-10-24T14:09:43.991630+00:00","last_updated":"2026-10-24T14:09:43.991630+00:00","context":{"id":"01M5Q3XZ1QYD7XJJ96ZS9SW8VR","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.heizung_ess_zimmer_zeit_anwesenheit_feiertage_boost","state":"on","attributes":{"id":"1792304425201","last_triggered":"2026-10-24T14:50:00.088029+00:00","mode":"restart","current":0,"friendly_name":"Heizung Ess-Zimmer - Zeit Anwesenheit Feiertage Boost"},"last_changed":"2026-10-24T14:09:43.992556+00:00","last_reported":"2026-10-24T14:50:00.106057+00:00","last_updated":"2026-10-24T14:50:00.106057+00:00","context":{"id":"01M5Q67PGJ82NZZJK7E97YGYVE","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.heizung_ess_zimmer_manueller_thermostat_boost","state":"on","attributes":{"id":"1792313899053","last_triggered":"2026-10-24T14:10:04.301482+00:00","mode":"restart","current":0,"friendly_name":"Heizung Ess-Zimmer - Manueller Thermostat Boost"},"last_changed":"2026-10-24T14:09:43.993670+00:00","last_reported":"2026-10-24T14:10:06.307282+00:00","last_updated":"2026-10-24T14:10:06.307282+00:00","context":{"id":"01M5Q3YJW2S5D4B8NXV5QJZKNX","parent_id":"01M5Q3YES74AW9RG6F4PMW3V37","user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.heizung_ess_zimmer_hand_boost_bei_anwesenheit_verlangern","state":"on","attributes":{"id":"1792447727777","last_triggered":"2026-10-20T20:59:33.746482+00:00","mode":"restart","current":0,"friendly_name":"Heizung Ess-Zimmer - Hand-Boost bei Anwesenheit verlängern"},"last_changed":"2026-10-24T14:09:43.994625+00:00","last_reported":"2026-10-24T14:09:43.994625+00:00","last_updated":"2026-10-24T14:09:43.994625+00:00","context":{"id":"01M5Q3XZ1TC3Z6Z5SP0D6XFYM9","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.zigbee2mqtt_bridge_connection_state","state":"on","attributes":{"device_class":"connectivity","friendly_name":"Zigbee2MQTT Bridge Connection state"},"last_changed":"2026-10-24T14:09:53.322027+00:00","last_reported":"2026-10-24T14:09:53.322027+00:00","last_updated":"2026-10-24T14:09:53.322027+00:00","context":{"id":"01M5Q3Y85AZ8PJBZ44KJ18XHBW","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.0x0c2a6ffffe750972_automatic_valve_adapt","state":"off","attributes":{"friendly_name":"Thermostat Frank Automatic valve adaptation requested"},"last_changed":"2026-10-24T14:10:05.814743+00:00","last_reported":"2026-10-24T14:10:05.814743+00:00","last_updated":"2026-10-24T14:10:05.814743+00:00","context":{"id":"01M5Q3YMBPHPMRJBMBM0WFQHZR","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.0x0c2a6ffffe750972_battery_low","state":"off","attributes":{"device_class":"battery","friendly_name":"Thermostat Frank Batteriestand"},"last_changed":"2026-10-24T14:10:05.815933+00:00","last_reported":"2026-10-24T14:10:05.815933+00:00","last_updated":"2026-10-24T14:10:05.815933+00:00","context":{"id":"01M5Q3YMBQTZEAR5GP6XD3562K","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.0x4c97a1fffe0bf615_automatic_valve_adapt","state":"off","attributes":{"friendly_name":"Thermostat _Esszimmer Automatic valve adaptation requested"},"last_changed":"2026-10-24T14:10:04.284302+00:00","last_reported":"2026-10-24T14:10:04.284302+00:00","last_updated":"2026-10-24T14:10:04.284302+00:00","context":{"id":"01M5Q3YJVWB1AG34BAFM1FV8PY","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.0x4c97a1fffe0bf615_battery_low","state":"off","attributes":{"device_class":"battery","friendly_name":"Thermostat _Esszimmer Batteriestand"},"last_changed":"2026-10-24T14:10:04.283405+00:00","last_reported":"2026-10-24T14:10:04.283405+00:00","last_updated":"2026-10-24T14:10:04.283405+00:00","context":{"id":"01M5Q3YJVVY78G23KZDGJJM8QZ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"binary_sensor.0x8c65a3fffef75f0a_occupancy","state":"on","attributes":{"device_class":"occupancy","friendly_name":"Bewegungssensor Belegung"},"last_changed":"2026-10-24T14:53:44.292340+00:00","last_reported":"2026-10-24T14:53:44.292340+00:00","last_updated":"2026-10-24T14:53:44.292340+00:00","context":{"id":"01M5Q6EHF43GKXDMHEYQE165T7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"button.zigbee2mqtt_bridge_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Zigbee2MQTT Bridge Restart"},"last_changed":"2026-10-24T14:09:53.354133+00:00","last_reported":"2026-10-24T14:09:53.354133+00:00","last_updated":"2026-10-24T14:09:53.354133+00:00","context":{"id":"01M5Q3Y86A037YHHTT9B7JSHVW","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"button.0x0c2a6ffffe750972_valve_adapt_process","state":"unknown","attributes":{"friendly_name":"Thermostat Frank Trigger adaptation process"},"last_changed":"2026-10-24T14:09:53.376580+00:00","last_reported":"2026-10-24T14:09:53.376580+00:00","last_updated":"2026-10-24T14:09:53.376580+00:00","context":{"id":"01M5Q3Y870FE4AC1EQJ5F98QPQ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"button.0x842712fffebb9c51_reset_energy_meters","state":"unknown","attributes":{"friendly_name":"Jalousie Reset energy meters"},"last_changed":"2026-10-24T14:09:53.300359+00:00","last_reported":"2026-10-24T14:09:53.300359+00:00","last_updated":"2026-10-24T14:09:53.300359+00:00","context":{"id":"01M5Q3Y84M2EJ9S9F9T8R6K9AY","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"button.0x4c97a1fffe0bf615_valve_adapt_process","state":"unknown","attributes":{"friendly_name":"Thermostat _Esszimmer Trigger adaptation process"},"last_changed":"2026-10-24T14:09:53.315142+00:00","last_reported":"2026-10-24T14:09:53.315142+00:00","last_updated":"2026-10-24T14:09:53.315142+00:00","context":{"id":"01M5Q3Y853Q6VXWHEVYBCV8J2F","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"number.0x0c2a6ffffe750972_local_temperature_calibration","state":"0","attributes":{"min":-5.0,"max":5.0,"step":0.1,"mode":"auto","unit_of_measurement":"°C","device_class":"temperature_delta","friendly_name":"Thermostat Frank Temperatur-Delta"},"last_changed":"2026-10-24T14:10:05.815073+00:00","last_reported":"2026-10-24T14:10:05.815073+00:00","last_updated":"2026-10-24T14:10:05.815073+00:00","context":{"id":"01M5Q3YMBQ8R5SGBXNXY78X2RS","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_max_value": 5.0,
+        "native_min_value": -5.0,
+        "native_step": 0.1,
+        "native_unit_of_measurement": "°C",
+        "native_value": 0
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"number.0x0c2a6ffffe750972_pi_heating_demand","state":"1","attributes":{"min":0.0,"max":100.0,"step":1.0,"mode":"auto","unit_of_measurement":"%","icon":"mdi:radiator","friendly_name":"Thermostat Frank PI heating demand"},"last_changed":"2026-10-24T14:54:29.787981+00:00","last_reported":"2026-10-24T14:54:29.787981+00:00","last_updated":"2026-10-24T14:54:29.787981+00:00","context":{"id":"01M5Q6FXWVVNP0FYXPRVRMCWA5","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_max_value": 100.0,
+        "native_min_value": 0.0,
+        "native_step": 1.0,
+        "native_unit_of_measurement": "%",
+        "native_value": 1
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"number.0x0c2a6ffffe750972_remote_temperature","state":"0","attributes":{"min":0.0,"max":35.0,"step":0.2,"mode":"auto","unit_of_measurement":"°C","friendly_name":"Thermostat Frank Remote temperature"},"last_changed":"2026-10-24T14:10:05.818448+00:00","last_reported":"2026-10-24T14:10:05.818448+00:00","last_updated":"2026-10-24T14:10:05.818448+00:00","context":{"id":"01M5Q3YMBT8P0TS65G51VCDRQE","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_max_value": 35.0,
+        "native_min_value": 0.0,
+        "native_step": 0.2,
+        "native_unit_of_measurement": "°C",
+        "native_value": 0
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"number.0x0c2a6ffffe750972_display_brightness","state":"70","attributes":{"min":0.0,"max":100.0,"step":10.0,"mode":"auto","unit_of_measurement":"%","friendly_name":"Thermostat Frank Display brightness"},"last_changed":"2026-10-24T14:10:05.814451+00:00","last_reported":"2026-10-24T14:10:05.814451+00:00","last_updated":"2026-10-24T14:10:05.814451+00:00","context":{"id":"01M5Q3YMBPY3R42DX5JFW1S3HG","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_max_value": 100.0,
+        "native_min_value": 0.0,
+        "native_step": 10.0,
+        "native_unit_of_measurement": "%",
+        "native_value": 70
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"number.0x0c2a6ffffe750972_display_switch_on_duration","state":"10","attributes":{"min":5.0,"max":30.0,"step":1.0,"mode":"auto","unit_of_measurement":"s","friendly_name":"Thermostat Frank Display switch-on duration"},"last_changed":"2026-10-24T14:10:05.815624+00:00","last_reported":"2026-10-24T14:10:05.815624+00:00","last_updated":"2026-10-24T14:10:05.815624+00:00","context":{"id":"01M5Q3YMBQ79PX51T71YC92X31","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_max_value": 30.0,
+        "native_min_value": 5.0,
+        "native_step": 1.0,
+        "native_unit_of_measurement": "s",
+        "native_value": 10
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"number.0x842712fffebb9c51_calibration_closing_time","state":"36","attributes":{"min":1.0,"max":90.0,"step":0.1,"mode":"auto","unit_of_measurement":"s","icon":"mdi:wrench-clock","friendly_name":"Jalousie Calibration closing time"},"last_changed":"2026-10-24T14:10:28.431429+00:00","last_reported":"2026-10-24T14:10:28.431429+00:00","last_updated":"2026-10-24T14:10:28.431429+00:00","context":{"id":"01M5Q3ZAEFWEMPTCFCDAKWNRBW","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_max_value": 90.0,
+        "native_min_value": 1.0,
+        "native_step": 0.1,
+        "native_unit_of_measurement": "s",
+        "native_value": 36
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"number.0x842712fffebb9c51_calibration_opening_time","state":"39","attributes":{"min":1.0,"max":90.0,"step":0.1,"mode":"auto","unit_of_measurement":"s","icon":"mdi:wrench-clock","friendly_name":"Jalousie Calibration opening time"},"last_changed":"2026-10-24T14:10:28.429066+00:00","last_reported":"2026-10-24T14:10:28.429066+00:00","last_updated":"2026-10-24T14:10:28.429066+00:00","context":{"id":"01M5Q3ZAEDG805FKBC06GSZ468","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_max_value": 90.0,
+        "native_min_value": 1.0,
+        "native_step": 0.1,
+        "native_unit_of_measurement": "s",
+        "native_value": 39
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"number.0x4c97a1fffe0bf615_local_temperature_calibration","state":"0","attributes":{"min":-5.0,"max":5.0,"step":0.1,"mode":"auto","unit_of_measurement":"°C","device_class":"temperature_delta","friendly_name":"Thermostat _Esszimmer Temperatur-Delta"},"last_changed":"2026-10-24T14:10:04.283818+00:00","last_reported":"2026-10-24T14:10:04.283818+00:00","last_updated":"2026-10-24T14:10:04.283818+00:00","context":{"id":"01M5Q3YJVV478BDD95K9ESKVM0","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_max_value": 5.0,
+        "native_min_value": -5.0,
+        "native_step": 0.1,
+        "native_unit_of_measurement": "°C",
+        "native_value": 0
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"number.0x4c97a1fffe0bf615_pi_heating_demand","state":"76","attributes":{"min":0.0,"max":100.0,"step":1.0,"mode":"auto","unit_of_measurement":"%","icon":"mdi:radiator","friendly_name":"Thermostat _Esszimmer PI heating demand"},"last_changed":"2026-10-24T14:53:59.228675+00:00","last_reported":"2026-10-24T14:53:59.228675+00:00","last_updated":"2026-10-24T14:53:59.228675+00:00","context":{"id":"01M5Q6F01W6HGZMQ32WJ069VWF","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_max_value": 100.0,
+        "native_min_value": 0.0,
+        "native_step": 1.0,
+        "native_unit_of_measurement": "%",
+        "native_value": 76
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"number.0x4c97a1fffe0bf615_remote_temperature","state":"0","attributes":{"min":0.0,"max":35.0,"step":0.2,"mode":"auto","unit_of_measurement":"°C","friendly_name":"Thermostat _Esszimmer Remote temperature"},"last_changed":"2026-10-24T14:10:04.271770+00:00","last_reported":"2026-10-24T14:10:04.271770+00:00","last_updated":"2026-10-24T14:10:04.271770+00:00","context":{"id":"01M5Q3YJVFSJ67H49MGM5RZC8H","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_max_value": 35.0,
+        "native_min_value": 0.0,
+        "native_step": 0.2,
+        "native_unit_of_measurement": "°C",
+        "native_value": 0
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"number.0x4c97a1fffe0bf615_display_brightness","state":"70","attributes":{"min":0.0,"max":100.0,"step":10.0,"mode":"auto","unit_of_measurement":"%","friendly_name":"Thermostat _Esszimmer Display brightness"},"last_changed":"2026-10-24T14:10:04.272297+00:00","last_reported":"2026-10-24T14:10:04.272297+00:00","last_updated":"2026-10-24T14:10:04.272297+00:00","context":{"id":"01M5Q3YJVGR5WBGC7YMD8Y552W","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_max_value": 100.0,
+        "native_min_value": 0.0,
+        "native_step": 10.0,
+        "native_unit_of_measurement": "%",
+        "native_value": 70
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"number.0x4c97a1fffe0bf615_display_switch_on_duration","state":"10","attributes":{"min":5.0,"max":30.0,"step":1.0,"mode":"auto","unit_of_measurement":"s","friendly_name":"Thermostat _Esszimmer Display switch-on duration"},"last_changed":"2026-10-24T14:10:04.284090+00:00","last_reported":"2026-10-24T14:10:04.284090+00:00","last_updated":"2026-10-24T14:10:04.284090+00:00","context":{"id":"01M5Q3YJVWV7JT776DA6Z65ARW","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_max_value": 30.0,
+        "native_min_value": 5.0,
+        "native_step": 1.0,
+        "native_unit_of_measurement": "s",
+        "native_value": 10
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"number.0x8c65a3fffef75f0a_motion_timeout","state":"60","attributes":{"min":5.0,"max":60.0,"step":1.0,"mode":"auto","friendly_name":"Bewegungssensor Motion timeout"},"last_changed":"2026-10-24T14:10:28.514385+00:00","last_reported":"2026-10-24T14:10:28.514385+00:00","last_updated":"2026-10-24T14:10:28.514385+00:00","context":{"id":"01M5Q3ZAH2V46F1WPY5BRPJTV1","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_max_value": 60.0,
+        "native_min_value": 5.0,
+        "native_step": 1.0,
+        "native_unit_of_measurement": null,
+        "native_value": 60
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"select.zigbee2mqtt_bridge_log_level","state":"info","attributes":{"options":["error","warning","info","debug"],"friendly_name":"Zigbee2MQTT Bridge Log level"},"last_changed":"2026-10-24T14:09:53.423858+00:00","last_reported":"2026-10-24T14:09:53.423858+00:00","last_updated":"2026-10-24T14:09:53.423858+00:00","context":{"id":"01M5Q3Y88F5MCB0SFCXTTQ1ESK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"select.0x0c2a6ffffe750972_operating_mode","state":"schedule","attributes":{"options":["schedule","manual","pause"],"friendly_name":"Thermostat Frank Operating mode"},"last_changed":"2026-10-24T14:10:05.833346+00:00","last_reported":"2026-10-24T14:10:05.833346+00:00","last_updated":"2026-10-24T14:10:05.833346+00:00","context":{"id":"01M5Q3YMC93J3RE6SPY1F0WYK8","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"select.0x0c2a6ffffe750972_display_orientation","state":"standard_arrangement","attributes":{"options":["standard_arrangement","rotated_by_180_degrees"],"friendly_name":"Thermostat Frank Display orientation"},"last_changed":"2026-10-24T14:10:05.832995+00:00","last_reported":"2026-10-24T14:10:05.832995+00:00","last_updated":"2026-10-24T14:10:05.832995+00:00","context":{"id":"01M5Q3YMC8SQ29QG688FQ3MKR0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"select.0x0c2a6ffffe750972_displayed_temperature","state":"measured_temperature","attributes":{"options":["set_temperature","measured_temperature"],"friendly_name":"Thermostat Frank Displayed temperature"},"last_changed":"2026-10-24T14:10:05.816710+00:00","last_reported":"2026-10-24T14:10:05.816710+00:00","last_updated":"2026-10-24T14:10:05.816710+00:00","context":{"id":"01M5Q3YMBRGZM51PKXDX4PENAH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"select.0x842712fffebb9c51_switch_type","state":"button_key_change","attributes":{"options":["button","button_key_change","rocker_switch","rocker_switch_key_change","none"],"icon":"mdi:tune","friendly_name":"Jalousie Switch type"},"last_changed":"2026-10-24T14:10:28.427044+00:00","last_reported":"2026-10-24T14:10:28.427044+00:00","last_updated":"2026-10-24T14:10:28.427044+00:00","context":{"id":"01M5Q3ZAEB7N2P5FX6N1XG6Z3K","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"select.jalousie_switch_mode","state":"coupled","attributes":{"options":["coupled","only_long_press_decoupled"],"friendly_name":"Jalousie Switch mode"},"last_changed":"2026-10-24T14:10:28.430983+00:00","last_reported":"2026-10-24T14:10:28.430983+00:00","last_updated":"2026-10-24T14:10:28.430983+00:00","context":{"id":"01M5Q3ZAEEHYNN20C7JGNPM5G2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"select.0x4c97a1fffe0bf615_operating_mode","state":"schedule","attributes":{"options":["schedule","manual","pause"],"friendly_name":"Thermostat _Esszimmer Operating mode"},"last_changed":"2026-10-24T14:10:04.269761+00:00","last_reported":"2026-10-24T14:10:04.269761+00:00","last_updated":"2026-10-24T14:10:04.269761+00:00","context":{"id":"01M5Q3YJVD7TANQZZD65H58KZ2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"select.0x4c97a1fffe0bf615_display_orientation","state":"standard_arrangement","attributes":{"options":["standard_arrangement","rotated_by_180_degrees"],"friendly_name":"Thermostat _Esszimmer Display orientation"},"last_changed":"2026-10-24T14:10:04.269051+00:00","last_reported":"2026-10-24T14:10:04.269051+00:00","last_updated":"2026-10-24T14:10:04.269051+00:00","context":{"id":"01M5Q3YJVDQS2JB7BRRWG8Y7DM","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"select.0x4c97a1fffe0bf615_displayed_temperature","state":"measured_temperature","attributes":{"options":["set_temperature","measured_temperature"],"friendly_name":"Thermostat _Esszimmer Displayed temperature"},"last_changed":"2026-10-24T14:10:04.270103+00:00","last_reported":"2026-10-24T14:10:04.270103+00:00","last_updated":"2026-10-24T14:10:04.270103+00:00","context":{"id":"01M5Q3YJVEMBJ3YQNHJ9V6V3C7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.zigbee2mqtt_bridge_version","state":"2.14.2","attributes":{"icon":"mdi:zigbee","friendly_name":"Zigbee2MQTT Bridge Version"},"last_changed":"2026-10-24T14:09:53.424572+00:00","last_reported":"2026-10-24T14:09:53.424572+00:00","last_updated":"2026-10-24T14:09:53.424572+00:00","context":{"id":"01M5Q3Y88G85GNANYQ3BAJ57YK","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "2.14.2",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x0c2a6ffffe750972_local_temperature","state":"20.9","attributes":{"state_class":"measurement","unit_of_measurement":"°C","device_class":"temperature","friendly_name":"Thermostat Frank Temperatur"},"last_changed":"2026-10-24T14:53:57.935305+00:00","last_reported":"2026-10-24T14:53:57.935305+00:00","last_updated":"2026-10-24T14:53:57.935305+00:00","context":{"id":"01M5Q6EYSF6X22HERYVMFRSPQA","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "20.9",
+        "native_unit_of_measurement": "°C"
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x0c2a6ffffe750972_setpoint_change_source","state":"externally","attributes":{"friendly_name":"Thermostat Frank Setpoint change source"},"last_changed":"2026-10-24T14:10:05.817493+00:00","last_reported":"2026-10-24T14:10:05.817493+00:00","last_updated":"2026-10-24T14:10:05.817493+00:00","context":{"id":"01M5Q3YMBSQ22PVWGQA14CRNAK","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "externally",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x0c2a6ffffe750972_valve_adapt_status","state":"success","attributes":{"friendly_name":"Thermostat Frank Valve adaptation status"},"last_changed":"2026-10-24T14:10:05.817153+00:00","last_reported":"2026-10-24T14:10:05.817153+00:00","last_updated":"2026-10-24T14:10:05.817153+00:00","context":{"id":"01M5Q3YMBSB1FC4AFBKMSST4Z5","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "success",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x0c2a6ffffe750972_error_state","state":"ok","attributes":{"friendly_name":"Thermostat Frank Error state"},"last_changed":"2026-10-24T14:10:05.814069+00:00","last_reported":"2026-10-24T14:10:05.814069+00:00","last_updated":"2026-10-24T14:10:05.814069+00:00","context":{"id":"01M5Q3YMBPCR0003GP5BJ3X2VQ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "ok",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x0c2a6ffffe750972_battery","state":"100","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","friendly_name":"Thermostat Frank Batterie"},"last_changed":"2026-10-24T14:10:05.816344+00:00","last_reported":"2026-10-24T14:10:05.816344+00:00","last_updated":"2026-10-24T14:10:05.816344+00:00","context":{"id":"01M5Q3YMBR0QAFEVMJC43P59YT","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "100",
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x842712fffebb9c51_power","state":"0","attributes":{"state_class":"measurement","unit_of_measurement":"W","device_class":"power","friendly_name":"Jalousie Leistung"},"last_changed":"2026-10-24T14:10:28.428225+00:00","last_reported":"2026-10-24T14:10:28.428225+00:00","last_updated":"2026-10-24T14:10:28.428225+00:00","context":{"id":"01M5Q3ZAECZK4DA6E585KHYHR3","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "0",
+        "native_unit_of_measurement": "W"
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x842712fffebb9c51_energy","state":"0.11","attributes":{"state_class":"total_increasing","unit_of_measurement":"kWh","device_class":"energy","friendly_name":"Jalousie Energie"},"last_changed":"2026-10-24T14:10:28.430389+00:00","last_reported":"2026-10-24T14:10:28.430389+00:00","last_updated":"2026-10-24T14:10:28.430389+00:00","context":{"id":"01M5Q3ZAEEYTFSBF94HGPFDZAV","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "0.11",
+        "native_unit_of_measurement": "kWh"
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x842712fffebb9c51_motor_state","state":"stopped","attributes":{"icon":"mdi:state-machine","friendly_name":"Jalousie Motor state"},"last_changed":"2026-10-24T14:10:28.429710+00:00","last_reported":"2026-10-24T14:10:28.429710+00:00","last_updated":"2026-10-24T14:10:28.429710+00:00","context":{"id":"01M5Q3ZAEDGB1P80Z092KA8NK6","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "stopped",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x842712fffebb9c51_action_duration","state":"unknown","attributes":{"unit_of_measurement":"s","device_class":"duration","icon":"mdi:timer","friendly_name":"Jalousie Dauer"},"last_changed":"2026-10-24T14:09:53.393395+00:00","last_reported":"2026-10-24T14:09:53.393395+00:00","last_updated":"2026-10-24T14:09:53.393395+00:00","context":{"id":"01M5Q3Y87HHBCBRT226HHT3NZH","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": null,
+        "native_unit_of_measurement": "s"
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x4c97a1fffe0bf615_local_temperature","state":"20.3","attributes":{"state_class":"measurement","unit_of_measurement":"°C","device_class":"temperature","friendly_name":"Thermostat _Esszimmer Temperatur"},"last_changed":"2026-10-24T14:54:27.815287+00:00","last_reported":"2026-10-24T14:54:27.815287+00:00","last_updated":"2026-10-24T14:54:27.815287+00:00","context":{"id":"01M5Q6FVZ7AXXXXW6NJASD0GSP","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "20.3",
+        "native_unit_of_measurement": "°C"
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x4c97a1fffe0bf615_setpoint_change_source","state":"externally","attributes":{"friendly_name":"Thermostat _Esszimmer Setpoint change source"},"last_changed":"2026-10-24T14:10:04.285176+00:00","last_reported":"2026-10-24T14:10:04.285176+00:00","last_updated":"2026-10-24T14:10:04.285176+00:00","context":{"id":"01M5Q3YJVXW2QW6RF1M0GK9BVC","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "externally",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x4c97a1fffe0bf615_valve_adapt_status","state":"success","attributes":{"friendly_name":"Thermostat _Esszimmer Valve adaptation status"},"last_changed":"2026-10-24T14:10:04.304667+00:00","last_reported":"2026-10-24T14:10:04.304667+00:00","last_updated":"2026-10-24T14:10:04.304667+00:00","context":{"id":"01M5Q3YJWGP5R000ERTPXX5V6C","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "success",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x4c97a1fffe0bf615_error_state","state":"ok","attributes":{"friendly_name":"Thermostat _Esszimmer Error state"},"last_changed":"2026-10-24T14:10:04.284597+00:00","last_reported":"2026-10-24T14:10:04.284597+00:00","last_updated":"2026-10-24T14:10:04.284597+00:00","context":{"id":"01M5Q3YJVWKC5YJ7Y076TTMGXQ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "ok",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x4c97a1fffe0bf615_battery","state":"100","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","friendly_name":"Thermostat _Esszimmer Batterie"},"last_changed":"2026-10-24T14:10:04.282806+00:00","last_reported":"2026-10-24T14:10:04.282806+00:00","last_updated":"2026-10-24T14:10:04.282806+00:00","context":{"id":"01M5Q3YJVT8Y42F8NS4VTZ34DE","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "100",
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x8c65a3fffef75f0a_illumination","state":"bright","attributes":{"friendly_name":"Bewegungssensor Illumination"},"last_changed":"2026-10-24T14:10:28.522002+00:00","last_reported":"2026-10-24T14:10:28.522002+00:00","last_updated":"2026-10-24T14:10:28.522002+00:00","context":{"id":"01M5Q3ZAHA3BA0R3MD1GFK6P75","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "bright",
+        "native_unit_of_measurement": null
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x8c65a3fffef75f0a_battery","state":"100","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","friendly_name":"Bewegungssensor Batterie"},"last_changed":"2026-10-24T14:10:28.520720+00:00","last_reported":"2026-10-24T14:10:28.520720+00:00","last_updated":"2026-10-24T14:10:28.520720+00:00","context":{"id":"01M5Q3ZAH8AFNWAVJMQWBF4M5S","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "100",
+        "native_unit_of_measurement": "%"
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"sensor.0x8c65a3fffef75f0a_voltage","state":"3000","attributes":{"state_class":"measurement","unit_of_measurement":"mV","device_class":"voltage","friendly_name":"Bewegungssensor Spannung"},"last_changed":"2026-10-24T14:10:28.519903+00:00","last_reported":"2026-10-24T14:10:28.519903+00:00","last_updated":"2026-10-24T14:10:28.519903+00:00","context":{"id":"01M5Q3ZAH72MK61B9J5X7Q02GQ","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "native_value": "3000",
+        "native_unit_of_measurement": "mV"
+      },
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"switch.zigbee2mqtt_bridge_permit_join","state":"off","attributes":{"icon":"mdi:human-greeting-proximity","friendly_name":"Zigbee2MQTT Bridge Permit join"},"last_changed":"2026-10-24T14:09:53.424280+00:00","last_reported":"2026-10-24T14:09:53.424280+00:00","last_updated":"2026-10-24T14:09:53.424280+00:00","context":{"id":"01M5Q3Y88G4RYBPM99M4SBWVMS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"switch.0x0c2a6ffffe750972_window_detection","state":"off","attributes":{"icon":"mdi:window-open-variant","friendly_name":"Thermostat Frank Window detection"},"last_changed":"2026-10-24T14:10:05.813646+00:00","last_reported":"2026-10-24T14:10:05.813646+00:00","last_updated":"2026-10-24T14:10:05.813646+00:00","context":{"id":"01M5Q3YMBN4CHY8HS5K1PZ2AW7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"switch.0x0c2a6ffffe750972_boost_heating","state":"off","attributes":{"friendly_name":"Thermostat Frank Activate boost heating"},"last_changed":"2026-10-24T14:10:05.817793+00:00","last_reported":"2026-10-24T14:10:05.817793+00:00","last_updated":"2026-10-24T14:10:05.817793+00:00","context":{"id":"01M5Q3YMBS9Z61PCJ2PX7ZHHJC","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"switch.0x0c2a6ffffe750972_child_lock","state":"off","attributes":{"icon":"mdi:account-lock","friendly_name":"Thermostat Frank Child lock"},"last_changed":"2026-10-24T14:10:05.815329+00:00","last_reported":"2026-10-24T14:10:05.815329+00:00","last_updated":"2026-10-24T14:10:05.815329+00:00","context":{"id":"01M5Q3YMBQ4TYQXY9APNJYTNH0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"switch.0x842712fffebb9c51_child_lock","state":"off","attributes":{"icon":"mdi:account-lock","friendly_name":"Jalousie Child lock"},"last_changed":"2026-10-24T14:10:28.431787+00:00","last_reported":"2026-10-24T14:10:28.431787+00:00","last_updated":"2026-10-24T14:10:28.431787+00:00","context":{"id":"01M5Q3ZAEF9D2ZC2ZHFQVTM8Z4","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"switch.0x4c97a1fffe0bf615_window_detection","state":"off","attributes":{"icon":"mdi:window-open-variant","friendly_name":"Thermostat _Esszimmer Window detection"},"last_changed":"2026-10-24T14:10:04.286159+00:00","last_reported":"2026-10-24T14:10:04.286159+00:00","last_updated":"2026-10-24T14:10:04.286159+00:00","context":{"id":"01M5Q3YJVYQ13FJC03B6BR99DS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"switch.0x4c97a1fffe0bf615_boost_heating","state":"off","attributes":{"friendly_name":"Thermostat _Esszimmer Activate boost heating"},"last_changed":"2026-10-24T14:10:04.285856+00:00","last_reported":"2026-10-24T14:10:04.285856+00:00","last_updated":"2026-10-24T14:10:04.285856+00:00","context":{"id":"01M5Q3YJVX3FEZPCJKFVPZECME","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"switch.0x4c97a1fffe0bf615_child_lock","state":"off","attributes":{"icon":"mdi:account-lock","friendly_name":"Thermostat _Esszimmer Child lock"},"last_changed":"2026-10-24T14:10:04.305276+00:00","last_reported":"2026-10-24T14:10:04.305276+00:00","last_updated":"2026-10-24T14:10:04.305276+00:00","context":{"id":"01M5Q3YJWHAE9ZHWRTHXZ78ZG0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"update.0x0c2a6ffffe750972_thermostat_frank","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"319390224","in_progress":false,"latest_version":"319390224","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png","icon":"heat","friendly_name":"Thermostat_Frank","supported_features":5},"last_changed":"2026-10-24T14:10:05.833825+00:00","last_reported":"2026-10-24T14:10:05.833825+00:00","last_updated":"2026-10-24T14:10:05.833825+00:00","context":{"id":"01M5Q3YMC97SBWDS6N7C496S11","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"update.0x842712fffebb9c51","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"555248176","in_progress":false,"latest_version":"555248176","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png","friendly_name":"Jalousie","supported_features":5},"last_changed":"2026-10-24T14:10:28.441632+00:00","last_reported":"2026-10-24T14:10:28.441632+00:00","last_updated":"2026-10-24T14:10:28.441632+00:00","context":{"id":"01M5Q3ZAES932X5X8A2WH23QB0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"update.0x4c97a1fffe0bf615","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"319390224","in_progress":false,"latest_version":"319390224","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png","friendly_name":"Thermostat _Esszimmer","supported_features":5},"last_changed":"2026-10-24T14:10:04.270647+00:00","last_reported":"2026-10-24T14:10:04.270647+00:00","last_updated":"2026-10-24T14:10:04.270647+00:00","context":{"id":"01M5Q3YJVESN61ETN5SKTCFP7Z","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"update.0x8c65a3fffef75f0a","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"8705","in_progress":false,"latest_version":"8705","release_summary":null,"release_url":null,"skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://github.com/Koenkk/zigbee2mqtt/raw/master/images/logo.png","friendly_name":"Bewegungssensor","supported_features":5},"last_changed":"2026-10-24T14:10:28.521554+00:00","last_reported":"2026-10-24T14:10:28.521554+00:00","last_updated":"2026-10-24T14:10:28.521554+00:00","context":{"id":"01M5Q3ZAH98BMEJHTWPM6VBS9S","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-24T14:54:44.055937+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.heizung_ess_zimmer_boost_nach_timerende_zurucksetzen","state":"on","attributes":{"id":"1792319639429","last_triggered":"2026-10-19T15:30:31.821702+00:00","mode":"single","current":0,"friendly_name":"Heizung Ess-Zimmer - Boost nach Timerende zurücksetzen"},"last_changed":"2026-10-19T16:03:48.622813+00:00","last_reported":"2026-10-19T16:03:48.622813+00:00","last_updated":"2026-10-19T16:03:48.622813+00:00","context":{"id":"01M5AEF88E3K1KT738XG8ARWSG","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-19T17:04:56.228121+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.jalousie_dammerungszeiten_berechnen","state":"on","attributes":{"id":"1792357660178","last_triggered":"2026-10-19T18:31:41.470458+00:00","mode":"restart","current":0,"friendly_name":"Jalousie: Dämmerungszeiten berechnen"},"last_changed":"2026-10-19T16:03:48.623877+00:00","last_reported":"2026-10-19T18:31:41.476979+00:00","last_updated":"2026-10-19T18:31:41.476979+00:00","context":{"id":"01M5APY14YVRVFDABN312BYNAY","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-19T18:49:10.798304+00:00"
+    },
+    {
+      "state": {"entity_id":"input_boolean.input_boolean_heizung_ess_zimmer_heizperiode_beendet","state":"off","attributes":{"editable":true,"friendly_name":"Heizung Esszimmer ausschalten"},"last_changed":"2026-10-17T22:56:31.359171+00:00","last_reported":"2026-10-17T22:56:31.359171+00:00","last_updated":"2026-10-17T22:56:31.359171+00:00","context":{"id":"01M5619GKZ1M2Q0RD3HQDZ5Y4W","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-18T05:15:54.554207+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.input_number_absenktemperatur_ess_zimmer","state":"17.0","attributes":{"min":10.0,"max":25.0,"step":0.5,"mode":"slider","initial":null,"editable":true,"unit_of_measurement":"°C","friendly_name":"Absenktemperatur Esszimmer"},"last_changed":"2026-10-17T22:56:31.354271+00:00","last_reported":"2026-10-17T22:56:31.354271+00:00","last_updated":"2026-10-17T22:56:31.354271+00:00","context":{"id":"01M5619GKTHBSMKV68XRHTP4MP","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-18T05:13:30.189156+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.input_number_heiztemperatur_ess_zimmer","state":"21.0","attributes":{"min":10.0,"max":25.0,"step":0.5,"mode":"slider","initial":null,"editable":true,"unit_of_measurement":"°C","friendly_name":"Heiztemperatur Esszimmer"},"last_changed":"2026-10-17T22:56:31.355231+00:00","last_reported":"2026-10-17T22:56:31.355231+00:00","last_updated":"2026-10-17T22:56:31.355231+00:00","context":{"id":"01M5619GKV5KY63JXTG72PTCQQ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-18T05:12:54.488371+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.input_datetime_werktag_morgens_ess_zimmer_start","state":"00:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":0,"minute":0,"second":0,"timestamp":0,"friendly_name":"Werktags morgens Start"},"last_changed":"2026-10-17T22:56:39.594857+00:00","last_reported":"2026-10-17T22:56:39.594857+00:00","last_updated":"2026-10-17T22:56:39.594857+00:00","context":{"id":"01M5619RNAQB3FP7PJCSX308VB","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-18T05:14:54.594072+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.input_datetime_werktag_morgens_ess_zimmer_ende","state":"00:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":0,"minute":0,"second":0,"timestamp":0,"friendly_name":"Werktags morgen Ende"},"last_changed":"2026-10-17T22:56:39.596444+00:00","last_reported":"2026-10-17T22:56:39.596444+00:00","last_updated":"2026-10-17T22:56:39.596444+00:00","context":{"id":"01M5619RNCB4ZM37PFQK5R8WF2","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-18T05:15:09.707710+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.input_datetime_werktag_abends_ess_zimmer_start","state":"00:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":0,"minute":0,"second":0,"timestamp":0,"friendly_name":"Werktags Abend Start"},"last_changed":"2026-10-17T22:56:39.597690+00:00","last_reported":"2026-10-17T22:56:39.597690+00:00","last_updated":"2026-10-17T22:56:39.597690+00:00","context":{"id":"01M5619RNDQYY8VK85SFKGXKN9","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-18T05:15:28.291407+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.input_datetime_werktag_abends_ess_zimmer_ende","state":"00:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":0,"minute":0,"second":0,"timestamp":0,"friendly_name":"Werktag Abend Ende"},"last_changed":"2026-10-17T22:56:39.598991+00:00","last_reported":"2026-10-17T22:56:39.598991+00:00","last_updated":"2026-10-17T22:56:39.598991+00:00","context":{"id":"01M5619RNEQN1V1RQC1RW98N2E","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-18T05:15:40.515866+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.input_datetime_wochenende_ess_zimmer_start","state":"07:15:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":7,"minute":15,"second":0,"timestamp":26100,"friendly_name":"Wochenende Start"},"last_changed":"2026-10-17T22:56:39.600381+00:00","last_reported":"2026-10-17T22:56:39.600381+00:00","last_updated":"2026-10-17T22:56:39.600381+00:00","context":{"id":"01M5619RNGW6DKZB8HD03HDGDS","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-18T05:14:26.894320+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.input_datetime_wochenende_ess_zimmer_ende","state":"09:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":9,"minute":0,"second":0,"timestamp":32400,"friendly_name":"Wochenende Ende"},"last_changed":"2026-10-17T22:56:39.601532+00:00","last_reported":"2026-10-17T22:56:39.601532+00:00","last_updated":"2026-10-17T22:56:39.601532+00:00","context":{"id":"01M5619RNH1N00ZBHP3YNGEBZH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-18T05:14:42.395546+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.esszimmer_heizung_ess_zimmer_boost_dauer","state":"75.0","attributes":{"min":1.0,"max":240.0,"step":15.0,"mode":"slider","initial":null,"editable":true,"unit_of_measurement":"min","friendly_name":"Heizung Ess_Zimmer Boost Dauer"},"last_changed":"2026-10-18T06:24:45.539340+00:00","last_reported":"2026-10-18T06:24:45.539340+00:00","last_updated":"2026-10-18T06:24:45.539340+00:00","context":{"id":"01M56TY8F2W88NJDG27RVNF8NK","parent_id":null,"user_id":"d3d8b03220d84003b25aa6c20ba3cdbd"}},
+      "extra_data": null,
+      "last_seen": "2026-10-18T08:43:26.892732+00:00"
+    },
+    {
+      "state": {"entity_id":"timer.timer_heizung_ess_zimmer_boost","state":"idle","attributes":{"duration":"0:00:00","editable":true,"last_transition":"finished","friendly_name":"Timer Heizung Boost"},"last_changed":"2026-10-17T21:26:47.621402+00:00","last_reported":"2026-10-17T21:26:47.621402+00:00","last_updated":"2026-10-17T21:26:47.621402+00:00","context":{"id":"01M55W5725GDPKJWWTWM6BYT25","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-17T21:26:47.659986+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.input_number_heizung_ess_zimmer_boost_dauer","state":"15.0","attributes":{"min":1.0,"max":240.0,"step":15.0,"mode":"slider","initial":null,"editable":true,"unit_of_measurement":"min","friendly_name":"Heizung Ess_Zimmer Boost Dauer"},"last_changed":"2026-10-17T21:24:24.697317+00:00","last_reported":"2026-10-17T21:24:24.697317+00:00","last_updated":"2026-10-17T21:24:24.697317+00:00","context":{"id":"01M55W0VFQ523QNK6BKSYVMZV8","parent_id":null,"user_id":"d3d8b03220d84003b25aa6c20ba3cdbd"}},
+      "extra_data": null,
+      "last_seen": "2026-10-17T21:25:21.109563+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.input_number_heizung_ess_zimmer_boost_dauer","state":"00:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":0,"minute":0,"second":0,"timestamp":0,"friendly_name":"input_number.heizung_ess_zimmer_boost_dauer"},"last_changed":"2026-10-17T19:17:44.724741+00:00","last_reported":"2026-10-17T19:17:44.724741+00:00","last_updated":"2026-10-17T19:17:44.724741+00:00","context":{"id":"01M55MRXMMPSX4V8GNNM5PW2XK","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-17T19:33:59.136146+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.offset_abenddaemmerung","state":"00:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":0,"minute":0,"second":0,"timestamp":0,"friendly_name":"Offset Abend Dämmerung"},"last_changed":"2026-10-18T15:56:07.084862+00:00","last_reported":"2026-10-18T16:02:45.460944+00:00","last_updated":"2026-10-18T16:02:45.462243+00:00","context":{"id":"01M57W0KJPXXNQV9WVNMXTA9PE","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-18T16:10:53.565243+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.offset_morgen_daemmerung","state":"00:00:00","attributes":{"has_date":false,"has_time":true,"editable":true,"hour":0,"minute":0,"second":0,"timestamp":0,"friendly_name":"Offset Morgen Dämmerung"},"last_changed":"2026-10-18T15:58:28.731914+00:00","last_reported":"2026-10-18T16:03:21.615049+00:00","last_updated":"2026-10-18T16:03:21.616187+00:00","context":{"id":"01M57W1PWGM36WMTN3HJ6D3K43","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-18T16:10:56.624945+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.tages_temperatur_ess_zimmer","state":"15.0","attributes":{"min":15.0,"max":35.0,"step":0.5,"mode":"slider","initial":null,"editable":true,"unit_of_measurement":"°C","friendly_name":"werktages_temperatur_ess_zimmer"},"last_changed":"2026-10-19T15:35:01.873743+00:00","last_reported":"2026-10-19T15:35:52.853817+00:00","last_updated":"2026-10-19T15:35:52.855530+00:00","context":{"id":"01M5ACW3RQFW80G6T1JB57XVAW","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-19T15:35:52.888306+00:00"
+    },
+    {
+      "state": {"entity_id":"input_number.standard_boost_temperatur_ess_zimmer","state":"15.0","attributes":{"min":15.0,"max":35.0,"step":0.5,"mode":"slider","initial":null,"editable":true,"unit_of_measurement":"°C","friendly_name":"hand_boost_temperatur_ess_zimmer"},"last_changed":"2026-10-19T16:42:11.020687+00:00","last_reported":"2026-10-19T16:55:29.233420+00:00","last_updated":"2026-10-19T16:55:29.234558+00:00","context":{"id":"01M5AHDW6J23G8WPTVJZV5Y56S","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-19T16:55:29.263439+00:00"
+    },
+    {
+      "state": {"entity_id":"input_datetime.input_datetime_jalousie_oeffnungszeit_morgen","state":"2026-10-22 00:00:00","attributes":{"has_date":true,"has_time":true,"editable":true,"year":2026,"month":10,"day":22,"hour":0,"minute":0,"second":0,"timestamp":1792620000.0,"friendly_name":"input_datetime.jalousie_oeffnungszeit_morgen"},"last_changed":"2026-10-22T20:25:05.220937+00:00","last_reported":"2026-10-22T20:25:05.223880+00:00","last_updated":"2026-10-22T20:25:05.220937+00:00","context":{"id":"01M5JMKTE4ERJTNPRKWCG3BRQJ","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2026-10-22T20:26:55.155198+00:00"
+    }
+  ]
+}

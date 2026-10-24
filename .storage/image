@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "image",
+  "data": {
+    "items": [
+      {
+        "id": "c5f9cd6e0ac1d5cf74f296a2d85a7b5a",
+        "filesize": 291855,
+        "content_type": "image/jpeg",
+        "name": "1000067767.jpg",
+        "uploaded_at": "2026-10-13T19:20:33.149356+00:00"
+      }
+    ]
+  }
+}

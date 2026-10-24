@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "id": "frank_leutheuser",
+        "name": "Frank Leutheuser",
+        "user_id": "d3d8b03220d84003b25aa6c20ba3cdbd",
+        "device_trackers": [
+          "device_tracker.s24ultra",
+          "device_tracker.sm_p610"
+        ]
+      },
+      {
+        "id": "christiane_schroter",
+        "name": "Christiane Schröter",
+        "device_trackers": [
+          "device_tracker.sm_p610",
+          "device_tracker.pot_lx1"
+        ],
+        "user_id": "20e75a485e55465dba4170ca3637068d",
+        "picture": null
+      }
+    ]
+  }
+}

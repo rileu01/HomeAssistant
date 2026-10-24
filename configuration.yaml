@@ -1,0 +1,38 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+template:
+  - sensor:
+
+      - name: "Jalousie Öffnungszeit"
+        unique_id: jalousie_oeffnungszeit
+        device_class: timestamp
+        state: >
+          {% set basis = state_attr('sun.sun', 'next_dawn') %}
+          {% set offset = states('input_number.offset_morgendaemmerung') | float(0) %}
+          {% if basis %}
+            {{ (as_datetime(basis) + timedelta(minutes=offset)).isoformat() }}
+          {% else %}
+            {{ none }}
+          {% endif %}
+
+      - name: "Jalousie Schließzeit"
+        unique_id: jalousie_schliesszeit
+        device_class: timestamp
+        state: >
+          {% set basis = state_attr('sun.sun', 'next_dusk') %}
+          {% set offset = states('input_number.offset_abenddaemmerung') | float(0) %}
+          {% if basis %}
+            {{ (as_datetime(basis) + timedelta(minutes=offset)).isoformat() }}
+          {% else %}
+            {{ none }}
+          {% endif %}

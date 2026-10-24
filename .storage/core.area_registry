@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "minor_version": 9,
+  "key": "core.area_registry",
+  "data": {
+    "areas": [
+      {
+        "aliases": [],
+        "floor_id": null,
+        "humidity_entity_id": null,
+        "icon": "mdi:sofa",
+        "id": "wohnzimmer",
+        "labels": [],
+        "name": "Wohnzimmer",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2026-09-25T22:17:21.452425+00:00",
+        "modified_at": "2026-09-25T22:17:21.452443+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "humidity_entity_id": null,
+        "icon": "mdi:stove",
+        "id": "kuche",
+        "labels": [],
+        "name": "Küche",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2026-09-25T22:17:21.479157+00:00",
+        "modified_at": "2026-09-25T22:17:21.479176+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "humidity_entity_id": null,
+        "icon": "mdi:bed",
+        "id": "schlafzimmer",
+        "labels": [],
+        "name": "Christiane_Schlafzimmer",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2026-09-25T22:17:21.479616+00:00",
+        "modified_at": "2026-09-27T20:06:47.840137+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "humidity_entity_id": null,
+        "icon": null,
+        "id": "frank_schlafzimmer",
+        "labels": [],
+        "name": "Frank_Schlafzimmer",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2026-09-27T20:06:33.311136+00:00",
+        "modified_at": "2026-09-27T20:06:33.311169+00:00"
+      },
+      {
+        "aliases": [],
+        "floor_id": null,
+        "humidity_entity_id": null,
+        "icon": null,
+        "id": "esszimmer",
+        "labels": [],
+        "name": "Esszimmer",
+        "picture": null,
+        "temperature_entity_id": null,
+        "created_at": "2026-10-17T15:59:13.978528+00:00",
+        "modified_at": "2026-10-17T15:59:13.978556+00:00"
+      }
+    ]
+  }
+}

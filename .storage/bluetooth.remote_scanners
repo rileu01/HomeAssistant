@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "bluetooth.remote_scanners",
+  "data": {
+    "B8:27:EB:6A:C2:0E": {
+      "connectable": true,
+      "expire_seconds": 195.0,
+      "discovered_device_advertisement_datas": {
+        "F0:06:9E:55:41:05": {
+          "device": {
+            "address": "F0:06:9E:55:41:05",
+            "name": "Fossil\u0000",
+            "rssi": -66,
+            "details": {
+              "source": "B8:27:EB:6A:C2:0E",
+              "path": "/org/bluez/hci0/dev_F0_06_9E_55_41_05",
+              "props": {
+                "Adapter": "/org/bluez/hci0"
+              }
+            }
+          },
+          "advertisement_data": {
+            "local_name": "Fossil\u0000",
+            "manufacturer_data": {
+              "223": "4b304630303531303159"
+            },
+            "service_data": {},
+            "service_uuids": [
+              "3dda0001-957f-7d4a-34a6-74696673696d",
+              "0000180d-0000-1000-8000-00805f9b34fb"
+            ],
+            "rssi": -66,
+            "tx_power": -127,
+            "platform_data": []
+          }
+        },
+        "32:F5:A9:C7:35:C7": {
+          "device": {
+            "address": "32:F5:A9:C7:35:C7",
+            "name": null,
+            "rssi": -78,
+            "details": {
+              "source": "B8:27:EB:6A:C2:0E",
+              "path": "/org/bluez/hci0/dev_32_F5_A9_C7_35_C7",
+              "props": {
+                "Adapter": "/org/bluez/hci0"
+              }
+            }
+          },
+          "advertisement_data": {
+            "local_name": null,
+            "manufacturer_data": {},
+            "service_data": {
+              "0000fef3-0000-1000-8000-00805f9b34fb": "4a1723365357301132321b87d97d4ad3ed7c0129273e6990a41fd1"
+            },
+            "service_uuids": [],
+            "rssi": -78,
+            "tx_power": -127,
+            "platform_data": []
+          }
+        },
+        "06:9A:01:27:0D:FD": {
+          "device": {
+            "address": "06:9A:01:27:0D:FD",
+            "name": null,
+            "rssi": -60,
+            "details": {
+              "source": "B8:27:EB:6A:C2:0E",
+              "path": "/org/bluez/hci0/dev_06_9A_01_27_0D_FD",
+              "props": {
+                "Adapter": "/org/bluez/hci0"
+              }
+            }
+          },
+          "advertisement_data": {
+            "local_name": null,
+            "manufacturer_data": {},
+            "service_data": {
+              "0000fcf1-0000-1000-8000-00805f9b34fb": "044aac828ed0ebdae853bdeed27ef8e45d44be43"
+            },
+            "service_uuids": [],
+            "rssi": -60,
+            "tx_power": -127,
+            "platform_data": []
+          }
+        },
+        "26:80:EF:29:E1:59": {
+          "device": {
+            "address": "26:80:EF:29:E1:59",
+            "name": null,
+            "rssi": -60,
+            "details": {
+              "source": "B8:27:EB:6A:C2:0E",
+              "path": "/org/bluez/hci0/dev_26_80_EF_29_E1_59",
+              "props": {
+                "Adapter": "/org/bluez/hci0"
+              }
+            }
+          },
+          "advertisement_data": {
+            "local_name": null,
+            "manufacturer_data": {},
+            "service_data": {
+              "0000fcf1-0000-1000-8000-00805f9b34fb": "044aac828ed0ebdae853bdeed27ef8e45d44be43"
+            },
+            "service_uuids": [],
+            "rssi": -60,
+            "tx_power": -127,
+            "platform_data": []
+          }
+        },
+        "10:FD:23:83:86:B0": {
+          "device": {
+            "address": "10:FD:23:83:86:B0",
+            "name": null,
+            "rssi": -79,
+            "details": {
+              "source": "B8:27:EB:6A:C2:0E",
+              "path": "/org/bluez/hci0/dev_10_FD_23_83_86_B0",
+              "props": {
+                "Adapter": "/org/bluez/hci0"
+              }
+            }
+          },
+          "advertisement_data": {
+            "local_name": null,
+            "manufacturer_data": {},
+            "service_data": {
+              "0000fef3-0000-1000-8000-00805f9b34fb": "4a1723365357301132321b87d97d4ad3ed7c0129273e6990a41fd1"
+            },
+            "service_uuids": [],
+            "rssi": -79,
+            "tx_power": -127,
+            "platform_data": []
+          }
+        },
+        "D5:33:C5:86:1D:39": {
+          "device": {
+            "address": "D5:33:C5:86:1D:39",
+            "name": "GBK_H6114_1D39",
+            "rssi": -89,
+            "details": {
+              "source": "B8:27:EB:6A:C2:0E",
+              "path": "/org/bluez/hci0/dev_D5_33_C5_86_1D_39",
+              "props": {
+                "Adapter": "/org/bluez/hci0"
+              }
+            }
+          },
+          "advertisement_data": {
+            "local_name": "GBK_H6114_1D39",
+            "manufacturer_data": {
+              "34818": "ec000a0101"
+            },
+            "service_data": {},
+            "service_uuids": [],
+            "rssi": -89,
+            "tx_power": -127,
+            "platform_data": []
+          }
+        }
+      },
+      "discovered_device_timestamps": {
+        "F0:06:9E:55:41:05": 1792850808.6909647,
+        "32:F5:A9:C7:35:C7": 1792850695.8525898,
+        "06:9A:01:27:0D:FD": 1792850698.3203492,
+        "26:80:EF:29:E1:59": 1792850811.3269315,
+        "10:FD:23:83:86:B0": 1792850808.8189628,
+        "D5:33:C5:86:1D:39": 1792850746.8448524
+      },
+      "discovered_device_raw": {
+        "F0:06:9E:55:41:05": "0201060dffdf004b3046303035313031590809466f7373696c00",
+        "32:F5:A9:C7:35:C7": "1e16f3fe4a1723365357301132321b87d97d4ad3ed7c0129273e6990a41fd1",
+        "06:9A:01:27:0D:FD": "0201021716f1fc044aac828ed0ebdae853bdeed27ef8e45d44be43",
+        "26:80:EF:29:E1:59": "0201021716f1fc044aac828ed0ebdae853bdeed27ef8e45d44be43",
+        "10:FD:23:83:86:B0": "1e16f3fe4a1723365357301132321b87d97d4ad3ed7c0129273e6990a41fd1",
+        "D5:33:C5:86:1D:39": "0201060f0947424b5f48363131345f3144333908ff0288ec000a0101"
+      }
+    }
+  }
+}

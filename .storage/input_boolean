@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_boolean",
+  "data": {
+    "items": [
+      {
+        "id": "heizung_frank_heizperiode_beendet",
+        "initial": false,
+        "name": "Frank Heizung ausschalten "
+      },
+      {
+        "id": "input_boolean_heizung_ess_zimmer_heizperiode_beendet",
+        "name": "Heizung Esszimmer ausschalten",
+        "initial": false
+      },
+      {
+        "id": "einbeziehung_anwesenheit_ess_zimmer",
+        "name": "Einbeziehung Anwesenheit Esszimmer"
+      }
+    ]
+  }
+}

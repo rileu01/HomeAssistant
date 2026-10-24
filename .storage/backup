@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "minor_version": 8,
+  "key": "backup",
+  "data": {
+    "backups": [
+      {
+        "backup_id": "dbb96cd8",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "ca2790ad",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "23696a16",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "c051427e",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "a2f99313",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "f40569e5",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "a5796f1a",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "5f559418",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "010a164c",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "82dcc7a4",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "6ed8da58",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "3e9e5e48",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "c9600300",
+        "failed_addons": [],
+        "failed_agent_ids": [
+          "hassio.Ubuntu_Data_Chamber"
+        ],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "19db8b55",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "b86521c1",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "77e78ae1",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "b9c22958",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "990fa332",
+        "failed_addons": [],
+        "failed_agent_ids": [
+          "hassio.Ubuntu_Data_Chamber"
+        ],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "02bf72cc",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      }
+    ],
+    "config": {
+      "agents": {
+        "hassio.local": {
+          "protected": false,
+          "retention": {
+            "copies": null,
+            "days": null
+          }
+        }
+      },
+      "automatic_backups_configured": true,
+      "create_backup": {
+        "agent_ids": [
+          "hassio.local"
+        ],
+        "include_addons": [],
+        "include_all_addons": true,
+        "include_database": true,
+        "include_folders": null,
+        "name": null,
+        "password": "EQZN-P1M1-IW3W-FCD3-R66F-4MWG-7PA7"
+      },
+      "last_attempted_automatic_backup": "2026-10-24T15:46:05.320758+02:00",
+      "last_completed_automatic_backup": "2026-10-24T15:46:10.062333+02:00",
+      "retention": {
+        "copies": null,
+        "days": null
+      },
+      "schedule": {
+        "days": [],
+        "recurrence": "daily",
+        "time": null
+      }
+    }
+  }
+}
